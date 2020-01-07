@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background: #fafafa;
+    }
+
+  .left {
+    --mdc-notched-outline-leading-width: 28px;
+    --mdc-notched-outline-leading-border-radius: 28px 0 0 28px;
+  }
+ 
+  .right {
+    --mdc-notched-outline-trailing-border-radius: 0 28px 28px 0;
+  }
+
+  lit-place-input {
+    width: -webkit-fill-available;
+  }
+  </style>
+</head>
+<body>
+  <div id="demo"></div>
+  <script type="module">
+    import { html, render } from 'lit-html';
+    import '../lit-place-input.js';
+    import '../node_modules/@material/mwc-textfield/mwc-textfield.js';
+    
+    render(
+      html`
+        <lit-place-input class="left right" 
+        helper="Almost there!"
+        .searchType="establishment" .apiKey=${"AIzaSyBmsetVvB1KlWoSbEXYQg1leRZO1PVPm_Q"} label="Choose your gym"
+        outlined>
+      </lit-place-input>
+      `,
+      document.querySelector('#demo')
+    );
+  </script>
+</body>
+</html>

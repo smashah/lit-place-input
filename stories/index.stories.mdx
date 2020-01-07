@@ -1,0 +1,64 @@
+import { Story, Preview, Meta, Props, html,withKnobs, withWebComponentsKnobs } from '@open-wc/demoing-storybook';
+
+import '../lit-place-input.js';
+
+<Meta 
+  title="LitPlaceInput"
+  decorators={[withKnobs, withWebComponentsKnobs]}
+  parameters={{
+    component: "lit-place-input",
+    options: { selectedPanel: "storybookjs/knobs/panel" }
+  }}
+/>
+
+# LitPlaceInput
+
+A simple and fully customizable [Place Autocomplete](https://developers.google.com/places/web-service/autocomplete) component.
+
+## Features:
+
+- Extends [@material/mwc-textfield](https://www.npmjs.com/package/@material/mwc-textfield)
+- Lightweight
+
+## How to use
+
+### Installation
+
+```bash
+yarn add lit-place-input
+```
+
+```js
+import 'lit-place-input/lit-place-input.js';
+```
+
+<Preview withToolbar>
+  <Story name="Simple">
+    {html`
+    <lit-place-input .apiKey=${"AIzaSyBmsetVvB1KlWoSbEXYQg1leRZO1PVPm_Q"} .label=${'Choose Place'}></lit-place-input>
+    `}
+  </Story>
+</Preview>
+
+## API
+
+<Props of="lit-place-input" />
+
+## Variations
+
+###### Custom CSS extended from MWC-Textfield
+
+<Story name="Custom MWC CSS">
+  {html`
+    <lit-place-input class="left right" 
+    style="
+    --mdc-notched-outline-leading-width: 28px;
+    --mdc-notched-outline-leading-border-radius: 28px 0 0 28px;
+    --mdc-notched-outline-trailing-border-radius: 0 28px 28px 0;
+    "
+        helper="Almost there!"
+        .searchType="establishment" .apiKey=${"AIzaSyBmsetVvB1KlWoSbEXYQg1leRZO1PVPm_Q"} label="Choose your gym"
+        outlined>
+      </lit-place-input>
+  `}
+</Story>
