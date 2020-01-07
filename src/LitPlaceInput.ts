@@ -1,4 +1,3 @@
-/// <reference no-default-lib="true"/>
 import { customElement } from 'lit-element';
 import { TextField } from '@material/mwc-textfield';
 import '@google-web-components/google-apis/google-maps-api.js';
