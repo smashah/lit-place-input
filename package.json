@@ -4,9 +4,10 @@
   "description": "A simple and fully customizable place autocomplete component extending @mwc-textfield, following open-wc recommendations",
   "author": "Mohammed Shah <@smashah>",
   "license": "MIT",
-  "main": "index.js",
-  "module": "index.js",
+  "main": "lib/LitPlaceInput.js",
+  "module": "lib/LitPlaceInput.js",
   "scripts": {
+    "build": "tsc",
     "start": "es-dev-server --app-index demo/index.html --node-resolve --open --watch",
     "lint:eslint": "eslint --ext .js,.html . --ignore-path .gitignore",
     "format:eslint": "eslint --ext .js,.html . --fix --ignore-path .gitignore",
