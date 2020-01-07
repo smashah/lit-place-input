@@ -1,4 +1,4 @@
-[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/whatsapp-button) [![npm version](https://badge.fury.io/js/whatsapp-button.svg)](https://badge.fury.io/js/whatsapp-button)
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/lit-place-input) [![npm version](https://badge.fury.io/js/whatsapp-button.svg)](https://badge.fury.io/js/lit-place-input)
 
 [![Buy me a coffee][buymeacoffee-shield]][buymeacoffee]
 
@@ -105,3 +105,6 @@ To run a local development server that serves the basic demo located in `demo/in
 npm start:compatibility
 ```
 To run a local development server in compatibility mode for older browsers that serves the basic demo located in `demo/index.html`
+
+[buymeacoffee-shield]: https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-2.svg
+[buymeacoffee]: https://www.buymeacoffee.com/0lUd5Y3

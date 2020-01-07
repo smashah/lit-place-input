@@ -7,7 +7,8 @@ import '../lit-place-input.js';
   decorators={[withKnobs, withWebComponentsKnobs]}
   parameters={{
     component: "lit-place-input",
-    options: { selectedPanel: "storybookjs/knobs/panel" }
+    options: { selectedPanel: "storybookjs/knobs/panel",
+    enableShortcuts: false }
   }}
 />
 
@@ -35,7 +36,7 @@ import 'lit-place-input/lit-place-input.js';
 <Preview withToolbar>
   <Story name="Simple">
     {html`
-    <lit-place-input .apiKey=${"AIzaSyBmsetVvB1KlWoSbEXYQg1leRZO1PVPm_Q"} .label=${'Choose Place'}></lit-place-input>
+    <lit-place-input .apiKey=${"AIzaSyCQjwnft-x6cXQYDkGNYBzaevanW3mVNBA"} .label=${'Choose Place'}></lit-place-input>
     `}
   </Story>
 </Preview>
@@ -57,7 +58,7 @@ import 'lit-place-input/lit-place-input.js';
     --mdc-notched-outline-trailing-border-radius: 0 28px 28px 0;
     "
         helper="Almost there!"
-        .searchType="establishment" .apiKey=${"AIzaSyBmsetVvB1KlWoSbEXYQg1leRZO1PVPm_Q"} label="Choose your gym"
+        .searchType="establishment" .apiKey=${"AIzaSyCQjwnft-x6cXQYDkGNYBzaevanW3mVNBA"} label="Choose your gym"
         outlined>
       </lit-place-input>
   `}

@@ -9,13 +9,13 @@
           "name": "apiKey",
           "type": "String",
           "description": "Required: A Maps API key. To obtain an API key, see developers.google.com/maps/documentation/javascript/tutorial#api_key.",
-          "default": "AIzaSyBmsetVvB1KlWoSbEXYQg1leRZO1PVPm_Q"
+          "default": "AIzaSyCQjwnft-x6cXQYDkGNYBzaevanW3mVNBA"
         },
         {
           "name": "searchCountryCode",
           "type": "String",
           "description": "bias search results to a country code  (ISO 3166-1 Alpha-2 country code, case insensitive).",
-          "default": "AIzaSyBmsetVvB1KlWoSbEXYQg1leRZO1PVPm_Q"
+          "default": "AIzaSyCQjwnft-x6cXQYDkGNYBzaevanW3mVNBA"
         },
         {
           "name": "searchBounds",
