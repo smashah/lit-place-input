@@ -55,10 +55,6 @@ Or grab from [unpkg.com CDN](https://unpkg.com/lit-place-input?module):
 -->
 
 ```html
-<script type="module">
-  import 'lit-place-input/lit-place-input.js';
-</script>
-
 <lit-place-input .apiKey=${"AIzaSyCQjwnft-x6cXQYDkGNYBzaevanW3mVNBA"} .label=${"Choose Place"}></lit-place-input>
 ```
 
