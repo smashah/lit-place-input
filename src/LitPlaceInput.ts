@@ -1,10 +1,8 @@
-import { customElement } from 'lit-element';
 import { TextField } from '@material/mwc-textfield';
 import '@google-web-components/google-apis/google-maps-api.js';
 import '@material/mwc-icon/mwc-icon-font.js';
 
-@customElement('lib-input-place')
-export class LitPlaceInput extends TextField {
+export default class LitPlaceInput extends TextField {
   static get properties() {
     return {
       /**
@@ -575,3 +573,5 @@ export class LitPlaceInput extends TextField {
     }
   }
 }
+
+window.customElements.define('lit-place-input', LitPlaceInput);

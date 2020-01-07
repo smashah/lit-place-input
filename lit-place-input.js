@@ -1,1 +1,1 @@
-export { LitPlaceInput } from './lib/LitPlaceInput.js';
+export  * from './lib/LitPlaceInput.js';

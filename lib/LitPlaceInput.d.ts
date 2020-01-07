@@ -1,7 +1,7 @@
 import { TextField } from '@material/mwc-textfield';
 import '@google-web-components/google-apis/google-maps-api.js';
 import '@material/mwc-icon/mwc-icon-font.js';
-export declare class LitPlaceInput extends TextField {
+export default class LitPlaceInput extends TextField {
     static readonly properties: {
         /**
          * Required: A Maps API key. To obtain an API key, see developers.google.com/maps/documentation/javascript/tutorial#api_key.

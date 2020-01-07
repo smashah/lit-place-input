@@ -24,7 +24,7 @@
       "importHelpers": true
     },
     "include": [
-      "src/**/*.ts"
+      "src/**/*.ts", "src/LitPlaceInput.js"
     ],
     "exclude": [
       "demo/**/.ts"
