@@ -1,6 +1,6 @@
 {
   "name": "lit-place-input",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A simple and fully customizable place autocomplete component extending @mwc-textfield, following open-wc recommendations",
   "author": "Mohammed Shah <@smashah>",
   "license": "MIT",
