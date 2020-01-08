@@ -1,206 +1,69 @@
 import { TextField } from '@material/mwc-textfield';
 import '@google-web-components/google-apis/google-maps-api.js';
 import '@material/mwc-icon/mwc-icon-font.js';
+import { property,customElement } from 'lit-element';
 
+@customElement('lit-place-input')
 export default class LitPlaceInput extends TextField {
-  static get properties() {
-    return {
-      /**
-       * Required: A Maps API key. To obtain an API key, see developers.google.com/maps/documentation/javascript/tutorial#api_key.
-       */
-      apiKey: {
-        type: String,
-        notify: true,
-      },
-      /**
-       * Indicates the Google API is loaded and that Autocomplete suggestions and geocoding functions are available
-       */
-      apiLoaded: {
-        type: Boolean,
-        notify: true,
-        readOnly: true,
-      },
-      /**
-       * Whether to hide the error message
-       * If true, the control does not validate that the value is complete (lat/lng, search term, place_id)
-       * and has been chosen from the places drop down.
-       */
-      hideError: {
-        type: Boolean,
-        value: false,
-      },
-      /**
-       * Whether to hide the place icon
-       * If true, the control does not show the place icon in the input box.
-       */
-      hideIcon: {
-        type: Boolean,
-        value: false,
-      },
-      /** @private */
-      _geocoder: {
-        type: Object,
-      },
-      /**
-       * bias search results to a country code  (ISO 3166-1 Alpha-2 country code, case insensitive).
-       */
-      searchCountryCode: {
-        type: String,
-      },
-      /**
-       * bias search results to a bounding rectangle.
-       * object properties (all are required):
-       * {
-       *    east: number,  // East longitude in degrees.
-       *    west: number,  // West longitude in degrees.
-       *    north: number, // North latitude in degrees.
-       *    south: number, // South latitude in degrees.
-       * }
-       *
-       */
-      searchBounds: {
-        type: Object,
-      },
-
-      /**
-       * bias search results by type
-       * permitted values:
-       *   address
-       *   geocode
-       *   establishment
-       *   (regions)
-       *   (cities)
-       */
-      searchType: {
-        type: String,
-      },
-      /**
-       * True if the entered text is not valid - i.e. not a selected place and not previously geocoded
-       */
-      invalid: {
-        type: Boolean,
-        notify: true,
-        readOnly: true,
-        value: false,
-      },
-      /**
-       * Internal representation of invalid, True if the entered text is not valid - i.e. not a selected place and not previously geocoded
-       */
-      _invalid: {
-        type: Boolean,
-        value: false,
-      },
-      /**
-       * an object - { lat: number, lng: number } - representing the geolocation of the entered / selected place
-       */
-      latLng: {
-        type: Object,
-        notify: true,
-        readOnly: true,
-      },
-      /**
-       * An object containing the place selected or geocoded:
-       * ```
-       *   place_id
-       *   formatted_address
-       *   latLng { lat: lng: }
-       *   search
-       *   basic:
-       *     name
-       *     address
-       *     city
-       *     state
-       *     stateCode
-       *     postalCode
-       *     country
-       *     countryCode
-       *     phone
-       *   placeDetails: additional properties from the google place result
-       *```
-       */
-      place: {
-        type: Object,
-        notify: true,
-        readOnly: true,
-      },
-      _place: {
-        type: Object,
-        notify: true,
-        readOnly: true,
-      },
-      /** @private */
-      _places: {
-        type: Object,
-      },
-
-      /**
-       * Sets the desired language for the input and the autocomplete list.
-       * Normally, Google Places Autocomplete defaults to the browser default language.
-       * This value allows the language to be set to a desired language regardless of the browser default.
-       *
-       * For a list of language codes supported see https://developers.google.com/maps/faq#languagesupport
-       *
-       * *** the value should not be modified after the element is loaded ***
-       */
-      language: {
-        type: String,
-        value: '',
-      },
-      /**
-       * If true, the element does not load the drawing, geometry or visualization libraries, slightly
-       * reducing overall payload size.
-       *
-       * Important: Do not use this option if the page contains other elements that make usef
-       * of the Google Maps Javascript API (e.g. google-map).  This can cause the maps API to be loaded
-       * more than once generating errors.
-       *
-       * Do not change this value after the element is loaded
-       *
-       */
-      minimizeApi: {
-        type: Boolean,
-        value: false,
-      },
-      /**
-       * An object representing the initial or returned value of the control.
-       * ```
-       * Properties:
-       *   search:  string - the search string
-       *   place_id:  string - the google maps place_id
-       *   latLng:  object {lat: number, lng: number} - latitude/Longitude
-       *```
-       */
-      valueObject: {
-        type: Object,
-        notify: true,
-      },
-      /** @private */
-      _value: {
-        type: String,
-        notify: true,
-      },
-    };
-  }
+  @property({type:String,reflect:true})
+apiKey="";
+@property({type:Boolean,reflect:true})
+apiLoaded=false;
+@property({type:Boolean})
+hideError=false;
+@property({type:Boolean})
+hideIcon=false;
+@property({type:Object})
+_geocoder:any;
+@property({type:String})
+searchCountryCode:any;
+@property({type:Object})
+searchBounds={};
+@property({type:String})
+searchType:any;
+@property({type:Boolean,reflect:true})
+invalid=false;
+@property({type:Boolean,reflect:true})
+searchBoundsStrict=false;
+@property({type:Boolean})
+_invalid=false;
+@property({type:Object,reflect:true})
+latLng ={
+  lat: 0,
+  lng: 0,
+}
+@property({type:Object,reflect:true})
+place:any={};
+@property({type:Object})
+_place={};
+@property({type:Object})
+_places:any;
+@property({type:String})
+language="";
+@property({type:Boolean})
+minimizeApi=false;
+@property({type:Object})
+valueObject: any;
+@property({type:String,reflect:true})
+_value:any;
 
   constructor() {
     super();
-    this.place = {};
-    this.latLng = {
-      lat: 0,
-      lng: 0,
-    };
     this.validationMessage = 'Invalid - please select a place';
-    this.apiLoaded = false;
-    this.searchCountryCode = 'test';
-    this.searchBounds = {};
-    this.searchBoundsStrict = false;
-    this.searchType = 'test';
     this.icon = 'place';
   }
 
-  updated(changedProperties) {
+  updated(changedProperties:any) {
     super.updated(changedProperties);
-    changedProperties.forEach((oldValue, propName) => {
+    changedProperties.forEach((oldValue:any, propName:string) => {
+      //@ts-ignore
+      // if(this[propName] && this[propName]!=={} && !this[propName]!=="")
+      this.dispatchEvent(new CustomEvent(`${propName}-changed`,{
+        detail:{
+          //@ts-ignore
+          [propName]: this[propName]
+        }
+      }))
       switch (propName) {
         case '_value':
           this._svalChanged(this._value);
@@ -213,12 +76,7 @@ export default class LitPlaceInput extends TextField {
         case 'searchBoundsStrict':
         case 'searchType':
         case 'apiLoaded':
-          this._searchBiasChanged(
-            this.searchCountryCode,
-            this.searchBounds,
-            this.searchBoundsStrict,
-            this.searchType,
-          );
+          this._searchBiasChanged();
           break;
         default:
           break;
@@ -226,9 +84,19 @@ export default class LitPlaceInput extends TextField {
     });
   }
 
+  get root() {
+    return this.shadowRoot || this;
+  }
+
+  gbid(tag:string){
+    //@ts-ignore
+    return this.root.getElementById(tag)
+  }
+
+
   async firstUpdated() {
     super.firstUpdated();
-    const gmaps = document.createElement('google-maps-api');
+    const gmaps : any = document.createElement('google-maps-api');
     gmaps.apiKey = this.apiKey;
     gmaps.version = '3.exp';
     gmaps.id = 'gmaps-api';
@@ -239,14 +107,16 @@ export default class LitPlaceInput extends TextField {
         // eslint-disable-next-line
       }).bind(this),
     );
-    this.shadowRoot.append(gmaps);
+    this.root.append(gmaps);
   }
 
   _mapsApiLoaded() {
+    //@ts-ignore
+    const google = window.google;
     if (!this._geocoder && !this._places) {
       this._geocoder = new google.maps.Geocoder();
       this._places = new google.maps.places.Autocomplete(
-        this.shadowRoot.getElementById('text-field'),
+        this.gbid('text-field'),
         {},
       );
       google.maps.event.addListener(this._places, 'place_changed', this._onChangePlace.bind(this));
@@ -302,7 +172,7 @@ export default class LitPlaceInput extends TextField {
     }
   }
 
-  _valueChanged(newValue, oldValue) {
+  _valueChanged(newValue:any, oldValue:any) {
     // update the search term and the invalid flag if the value is being set for the first time,
     // or if the value has changed and is not the same as the search term
     if (!oldValue || newValue.search !== oldValue.search || newValue.search !== this._value) {
@@ -318,7 +188,7 @@ export default class LitPlaceInput extends TextField {
     }
   }
 
-  _svalChanged(newValue) {
+  _svalChanged(newValue:any) {
     // reset the invalid property if the user has typed in the input field
 
     // if the newValue matches the selected place, which could happen if
@@ -408,14 +278,15 @@ export default class LitPlaceInput extends TextField {
    * @param  {object} options Optional - Geocoder Request options
    * @return {Promise<place>}         A promise for a place object or a status on failure
    */
-  geocode(address, options) {
+  geocode(address:string, options:any) {
     return new Promise((resolve, reject) => {
       if (!this._geocoder) {
         reject(new Error('Geocoder not ready.'));
       } else {
         const opts = options || {};
         opts.address = address || '';
-        this._geocoder.geocode(opts, (results, status) => {
+        this._geocoder.geocode(opts, (results:any, status:any) => {
+          //@ts-ignore
           if (status === google.maps.GeocoderStatus.OK && results && results[0]) {
             const p = this._extractPlaceInfo(results[0], opts.address);
             resolve(p);
@@ -433,7 +304,7 @@ export default class LitPlaceInput extends TextField {
    * @param  {object} options Optional - Geocoder Request options
    * @return {Promise<place>}         A promise for a place object or a status on failure
    */
-  reverseGeocode(latlng, options) {
+  reverseGeocode(latlng:any, options:any) {
     return new Promise((resolve, reject) => {
       if (!this._geocoder) {
         reject(new Error('Geocoder not ready.'));
@@ -442,7 +313,8 @@ export default class LitPlaceInput extends TextField {
         if (latlng) {
           opts.location = latlng;
         }
-        this._geocoder.geocode(opts, (results, status) => {
+        this._geocoder.geocode(opts, (results:any, status:any) => {
+          //@ts-ignore
           if (status === google.maps.GeocoderStatus.OK && results && results[0]) {
             const p = this._extractPlaceInfo(results[0], '');
             resolve(p);
@@ -457,19 +329,20 @@ export default class LitPlaceInput extends TextField {
   _onChangePlace() {
     const pl = this._places.getPlace();
     if (pl.geometry) {
-      const p = this._extractPlaceInfo(pl, this.shadowRoot.getElementById('text-field').value);
+      const p = this._extractPlaceInfo(pl, this.gbid('text-field').value);
       this._place = p;
-      this._invalid = false;
-      this._invalid = false;
+      // this._invalid = false;
+      // this._invalid = false;
       this.latLng = {
         lat: p.latLng.lat,
         lng: p.latLng.lng,
       };
-      this._value = this.shadowRoot.getElementById('text-field').value;
+      this._value = this.gbid('text-field').value;
       this.valueObject = {
-        search: this.shadowRoot.getElementById('text-field').value,
+        search: this.gbid('text-field').value,
         ...p,
       };
+      this.place = this.valueObject;
     }
   }
 
@@ -480,7 +353,7 @@ export default class LitPlaceInput extends TextField {
    */
 
   // eslint-disable-next-line
-  _extractPlaceInfo(pl, searchTerm) {
+  _extractPlaceInfo(pl:any, searchTerm:any) {
     const p = {
       place_id: pl.place_id,
       formatted_address: pl.formatted_address,
@@ -511,12 +384,14 @@ export default class LitPlaceInput extends TextField {
         utc_offset_minutes: pl.utc_offset_minutes,
       },
     };
+    
     // extract address components
     const address = {
       street_number: '',
       route: '',
     };
-    for (let i = 0; i < pl.address_components.length; i + 1) {
+    for (let i = 0; i < pl.address_components.length; i++) {
+      //@ts-ignore
       p.placeDetails.address_components.push(JSON.parse(JSON.stringify(pl.address_components[i])));
       switch (pl.address_components[i].types[0]) {
         case 'locality':
@@ -536,14 +411,17 @@ export default class LitPlaceInput extends TextField {
         case 'street_number':
           address.street_number = pl.address_components[i].short_name;
           p.basic.address = `${address.street_number} ${address.route}`;
+          //@ts-ignore
           p.basic.streetNumber = address.street_number;
           break;
         case 'route':
           address.route = pl.address_components[i].long_name;
           p.basic.address = `${address.street_number} ${address.route}`;
+          //@ts-ignore
           p.basic.route = address.route;
           break;
         default:
+          //@ts-ignore
           address[pl.address_components[i].types[0]] = pl.address_components[i].long_name;
       }
     }
@@ -554,7 +432,7 @@ export default class LitPlaceInput extends TextField {
    * Updates the current place, value and latLng with the place provided
    * @param  IpipPlace newPlace the new place
    */
-  putPlace(newPlace) {
+  putPlace(newPlace:any) {
     if (newPlace && newPlace.place_id && newPlace.latLng) {
       this._place = JSON.parse(JSON.stringify(newPlace));
       this.latLng = {
@@ -574,4 +452,4 @@ export default class LitPlaceInput extends TextField {
   }
 }
 
-window.customElements.define('lit-place-input', LitPlaceInput);
+// window.customElements.define('lit-place-input', LitPlaceInput);
