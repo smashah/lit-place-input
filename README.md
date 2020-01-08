@@ -6,7 +6,7 @@
 
 A simple and fully customizable [Place Autocomplete](https://developers.google.com/places/web-service/autocomplete) component.
 
-Checkout the [Storybook here  ↗](https://smashah.github.io/)
+Checkout the [Storybook here  ↗](https://smashah.github.io/lit-place-input/)
 
 
 ```html
