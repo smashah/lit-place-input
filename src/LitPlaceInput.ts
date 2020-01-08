@@ -1,51 +1,69 @@
 import { TextField } from '@material/mwc-textfield';
 import '@google-web-components/google-apis/google-maps-api.js';
 import '@material/mwc-icon/mwc-icon-font.js';
-import { property,customElement } from 'lit-element';
+import { property, customElement } from 'lit-element';
 
 @customElement('lit-place-input')
-export default class LitPlaceInput extends TextField {
-  @property({type:String,reflect:true})
-apiKey="";
-@property({type:Boolean,reflect:true})
-apiLoaded=false;
-@property({type:Boolean})
-hideError=false;
-@property({type:Boolean})
-hideIcon=false;
-@property({type:Object})
-_geocoder:any;
-@property({type:String})
-searchCountryCode:any;
-@property({type:Object})
-searchBounds={};
-@property({type:String})
-searchType:any;
-@property({type:Boolean,reflect:true})
-invalid=false;
-@property({type:Boolean,reflect:true})
-searchBoundsStrict=false;
-@property({type:Boolean})
-_invalid=false;
-@property({type:Object,reflect:true})
-latLng ={
-  lat: 0,
-  lng: 0,
-}
-@property({type:Object,reflect:true})
-place:any={};
-@property({type:Object})
-_place={};
-@property({type:Object})
-_places:any;
-@property({type:String})
-language="";
-@property({type:Boolean})
-minimizeApi=false;
-@property({type:Object})
-valueObject: any;
-@property({type:String,reflect:true})
-_value:any;
+class LitPlaceInput extends TextField {
+  @property({ type: String, reflect: true })
+  apiKey = '';
+
+  @property({ type: Boolean, reflect: true })
+  apiLoaded = false;
+
+  @property({ type: Boolean })
+  hideError = false;
+
+  @property({ type: Boolean })
+  hideIcon = false;
+
+  @property({ type: Object })
+  _geocoder: any;
+
+  @property({ type: String })
+  searchCountryCode: any;
+
+  @property({ type: Object })
+  searchBounds = {};
+
+  @property({ type: String })
+  searchType: any;
+
+  @property({ type: Boolean, reflect: true })
+  invalid = false;
+
+  @property({ type: Boolean, reflect: true })
+  searchBoundsStrict = false;
+
+  @property({ type: Boolean })
+  _invalid = false;
+
+  @property({ type: Object, reflect: true })
+  latLng = {
+    lat: 0,
+    lng: 0,
+  };
+
+  @property({ type: Object, reflect: true })
+  place: any = {};
+
+  @property({ type: Object })
+  _place = {};
+
+  @property({ type: Object })
+  _places: any;
+
+  @property({ type: String })
+  language = '';
+
+  @property({ type: Boolean })
+  minimizeApi = false;
+
+  @property({ type: Object })
+  valueObject: any;
+
+  @property({ type: String, reflect: true })
+  _value: any;
 
   constructor() {
     super();
@@ -53,17 +71,19 @@ _value:any;
     this.icon = 'place';
   }
 
-  updated(changedProperties:any) {
+  updated(changedProperties: any) {
     super.updated(changedProperties);
-    changedProperties.forEach((oldValue:any, propName:string) => {
-      //@ts-ignore
+    changedProperties.forEach((oldValue: any, propName: string) => {
+      // @ts-ignore
       // if(this[propName] && this[propName]!=={} && !this[propName]!=="")
-      this.dispatchEvent(new CustomEvent(`${propName}-changed`,{
-        detail:{
-          //@ts-ignore
-          [propName]: this[propName]
-        }
-      }))
+      this.dispatchEvent(
+        new CustomEvent(`${propName}-changed`, {
+          detail: {
+            // @ts-ignore
+            [propName]: this[propName],
+          },
+        }),
+      );
       switch (propName) {
         case '_value':
           this._svalChanged(this._value);
@@ -88,15 +108,14 @@ _value:any;
     return this.shadowRoot || this;
   }
 
-  gbid(tag:string){
-    //@ts-ignore
-    return this.root.getElementById(tag)
+  gbid(tag: string) {
+    // @ts-ignore
+    return this.root.getElementById(tag);
   }
-
 
   async firstUpdated() {
     super.firstUpdated();
-    const gmaps : any = document.createElement('google-maps-api');
+    const gmaps: any = document.createElement('google-maps-api');
     gmaps.apiKey = this.apiKey;
     gmaps.version = '3.exp';
     gmaps.id = 'gmaps-api';
@@ -111,14 +130,11 @@ _value:any;
   }
 
   _mapsApiLoaded() {
-    //@ts-ignore
-    const google = window.google;
+    // @ts-ignore
+    const { google } = window;
     if (!this._geocoder && !this._places) {
       this._geocoder = new google.maps.Geocoder();
-      this._places = new google.maps.places.Autocomplete(
-        this.gbid('text-field'),
-        {},
-      );
+      this._places = new google.maps.places.Autocomplete(this.gbid('text-field'), {});
       google.maps.event.addListener(this._places, 'place_changed', this._onChangePlace.bind(this));
       this.apiLoaded = true;
       this._searchBiasChanged();
@@ -172,7 +188,7 @@ _value:any;
     }
   }
 
-  _valueChanged(newValue:any, oldValue:any) {
+  _valueChanged(newValue: any, oldValue: any) {
     // update the search term and the invalid flag if the value is being set for the first time,
     // or if the value has changed and is not the same as the search term
     if (!oldValue || newValue.search !== oldValue.search || newValue.search !== this._value) {
@@ -188,7 +204,7 @@ _value:any;
     }
   }
 
-  _svalChanged(newValue:any) {
+  _svalChanged(newValue: any) {
     // reset the invalid property if the user has typed in the input field
 
     // if the newValue matches the selected place, which could happen if
@@ -278,15 +294,16 @@ _value:any;
    * @param  {object} options Optional - Geocoder Request options
    * @return {Promise<place>}         A promise for a place object or a status on failure
    */
-  geocode(address:string, options:any) {
+  geocode(address: string, options: any) {
     return new Promise((resolve, reject) => {
       if (!this._geocoder) {
         reject(new Error('Geocoder not ready.'));
       } else {
         const opts = options || {};
         opts.address = address || '';
-        this._geocoder.geocode(opts, (results:any, status:any) => {
-          //@ts-ignore
+        this._geocoder.geocode(opts, (results: any, status: any) => {
+          // @ts-ignore
+          // eslint-disable-next-line
           if (status === google.maps.GeocoderStatus.OK && results && results[0]) {
             const p = this._extractPlaceInfo(results[0], opts.address);
             resolve(p);
@@ -304,7 +321,7 @@ _value:any;
    * @param  {object} options Optional - Geocoder Request options
    * @return {Promise<place>}         A promise for a place object or a status on failure
    */
-  reverseGeocode(latlng:any, options:any) {
+  reverseGeocode(latlng: any, options: any) {
     return new Promise((resolve, reject) => {
       if (!this._geocoder) {
         reject(new Error('Geocoder not ready.'));
@@ -313,8 +330,9 @@ _value:any;
         if (latlng) {
           opts.location = latlng;
         }
-        this._geocoder.geocode(opts, (results:any, status:any) => {
-          //@ts-ignore
+        this._geocoder.geocode(opts, (results: any, status: any) => {
+          // @ts-ignore
+          // eslint-disable-next-line
           if (status === google.maps.GeocoderStatus.OK && results && results[0]) {
             const p = this._extractPlaceInfo(results[0], '');
             resolve(p);
@@ -353,7 +371,7 @@ _value:any;
    */
 
   // eslint-disable-next-line
-  _extractPlaceInfo(pl:any, searchTerm:any) {
+  _extractPlaceInfo(pl: any, searchTerm: any) {
     const p = {
       place_id: pl.place_id,
       formatted_address: pl.formatted_address,
@@ -384,14 +402,15 @@ _value:any;
         utc_offset_minutes: pl.utc_offset_minutes,
       },
     };
-    
+
     // extract address components
     const address = {
       street_number: '',
       route: '',
     };
+    // eslint-disable-next-line
     for (let i = 0; i < pl.address_components.length; i++) {
-      //@ts-ignore
+      // @ts-ignore
       p.placeDetails.address_components.push(JSON.parse(JSON.stringify(pl.address_components[i])));
       switch (pl.address_components[i].types[0]) {
         case 'locality':
@@ -411,17 +430,17 @@ _value:any;
         case 'street_number':
           address.street_number = pl.address_components[i].short_name;
           p.basic.address = `${address.street_number} ${address.route}`;
-          //@ts-ignore
+          // @ts-ignore
           p.basic.streetNumber = address.street_number;
           break;
         case 'route':
           address.route = pl.address_components[i].long_name;
           p.basic.address = `${address.street_number} ${address.route}`;
-          //@ts-ignore
+          // @ts-ignore
           p.basic.route = address.route;
           break;
         default:
-          //@ts-ignore
+          // @ts-ignore
           address[pl.address_components[i].types[0]] = pl.address_components[i].long_name;
       }
     }
@@ -432,7 +451,7 @@ _value:any;
    * Updates the current place, value and latLng with the place provided
    * @param  IpipPlace newPlace the new place
    */
-  putPlace(newPlace:any) {
+  putPlace(newPlace: any) {
     if (newPlace && newPlace.place_id && newPlace.latLng) {
       this._place = JSON.parse(JSON.stringify(newPlace));
       this.latLng = {
@@ -453,3 +472,4 @@ _value:any;
 }
 
 // window.customElements.define('lit-place-input', LitPlaceInput);
+export { LitPlaceInput };

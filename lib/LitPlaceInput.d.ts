@@ -1,7 +1,7 @@
 import { TextField } from '@material/mwc-textfield';
 import '@google-web-components/google-apis/google-maps-api.js';
 import '@material/mwc-icon/mwc-icon-font.js';
-export default class LitPlaceInput extends TextField {
+declare class LitPlaceInput extends TextField {
     apiKey: string;
     apiLoaded: boolean;
     hideError: boolean;
@@ -93,4 +93,5 @@ export default class LitPlaceInput extends TextField {
      */
     putPlace(newPlace: any): void;
 }
+export { LitPlaceInput };
 //# sourceMappingURL=LitPlaceInput.d.ts.map
