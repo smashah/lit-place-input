@@ -1526,9 +1526,9 @@
     request "^2.88.0"
 
 "@open-wc/prettier-config@^0.1.10":
-  version "0.1.13"
-  resolved "https://registry.yarnpkg.com/@open-wc/prettier-config/-/prettier-config-0.1.13.tgz#019143384cb88f35767a59f85c62efb5796f7d6d"
-  integrity sha512-oJrYH+qHohR6Q5hYYqHPevUymgOj/TQUGNs+DmTo93VM9fMCLhfpQF44QrFKQ+zGgmRrEys1V/oJcINEBGlKTQ==
+  version "0.1.14"
+  resolved "https://registry.yarnpkg.com/@open-wc/prettier-config/-/prettier-config-0.1.14.tgz#ee5fa9953b8795fd5df92cfa243f1bdab565c5a3"
+  integrity sha512-b30hqVLZLOvtGR0p3cmSvEYnu+OeKA1N/3v8m2u1bRt44+gVHkSOhf2/E90i8gveA6Maz98f0EwYFk03XEM/CA==
   dependencies:
     eslint-config-prettier "^3.3.0"
     prettier "^1.19.1"
