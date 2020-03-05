@@ -1683,9 +1683,9 @@
     rollup-plugin-index-html "^1.7.5"
 
 "@open-wc/eslint-config@^2.0.0":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@open-wc/eslint-config/-/eslint-config-2.0.2.tgz#9eafdb943ad9d9a26550f9b614a0a0c1d6b8abe6"
-  integrity sha512-wnO0d1oynw5s8lGggwQSQypIKNFUyJ99vL8GcaJ79GIHQS6QtsRng0YeuN0lrz8rloxt7ldq58Q1ZEtFV5Wuaw==
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/@open-wc/eslint-config/-/eslint-config-2.0.3.tgz#eec0e49670c512c9f95945267d99a59bd0b3e33e"
+  integrity sha512-CQ/xXU0dZNCoJrjTu8MqirlpSxQUMqMr5n+cNUmQN+UtoQWLf8Ag99XAs8rSg2gNv9HCNSrQXAikyBm6DGMO2Q==
   dependencies:
     babel-eslint "^10.0.3"
     eslint "^6.7.2"
