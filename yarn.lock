@@ -1762,13 +1762,14 @@
     storybook-prebuilt "^1.5.0"
 
 "@open-wc/eslint-config@^2.0.0":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@open-wc/eslint-config/-/eslint-config-2.0.2.tgz#9eafdb943ad9d9a26550f9b614a0a0c1d6b8abe6"
-  integrity sha512-wnO0d1oynw5s8lGggwQSQypIKNFUyJ99vL8GcaJ79GIHQS6QtsRng0YeuN0lrz8rloxt7ldq58Q1ZEtFV5Wuaw==
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/@open-wc/eslint-config/-/eslint-config-2.0.4.tgz#9e371aef2b2c5bf19e43910f3a7f2c31a6b2e458"
+  integrity sha512-FBTIPijwicxIG5mKY6XRm8PDH9Nx1D2YUkYQGJu4ySFayUKZ/uhdChKBxOwlV+Ftua23pYaNF7QjO1qi1FaJlg==
   dependencies:
     babel-eslint "^10.0.3"
     eslint "^6.7.2"
     eslint-config-airbnb-base "^14.0.0"
+    eslint-plugin-babel "^5.3.0"
     eslint-plugin-html "^6.0.0"
     eslint-plugin-import "^2.18.2"
     eslint-plugin-lit "^1.2.0"
@@ -4354,6 +4355,13 @@ eslint-module-utils@^2.4.1:
     debug "^2.6.9"
     pkg-dir "^2.0.0"
 
+eslint-plugin-babel@^5.3.0:
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-babel/-/eslint-plugin-babel-5.3.0.tgz#2e7f251ccc249326da760c1a4c948a91c32d0023"
+  integrity sha512-HPuNzSPE75O+SnxHIafbW5QB45r2w78fxqwK3HmjqIUoPfPzVrq6rD+CINU3yzoDSzEhUkX07VUphbF73Lth/w==
+  dependencies:
+    eslint-rule-composer "^0.3.0"
+
 eslint-plugin-html@^6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-html/-/eslint-plugin-html-6.0.0.tgz#28e5c3e71e6f612e07e73d7c215e469766628c13"
@@ -4400,6 +4408,11 @@ eslint-plugin-wc@^1.2.0:
   dependencies:
     js-levenshtein-esm "^1.2.0"
     validate-element-name "^2.1.1"
+
+eslint-rule-composer@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/eslint-rule-composer/-/eslint-rule-composer-0.3.0.tgz#79320c927b0c5c0d3d3d2b76c8b4a488f25bbaf9"
+  integrity sha512-bt+Sh8CtDmn2OajxvNO+BX7Wn4CIWMpTRm3MaiKPCQcnnlm0CS2mhui6QaoeQugs+3Kj2ESKEEGJUdVafwhiCg==
 
 eslint-scope@^5.0.0:
   version "5.0.0"
