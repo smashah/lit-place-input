@@ -3243,12 +3243,7 @@ caniuse-api@^3.0.0:
     lodash.memoize "^4.1.2"
     lodash.uniq "^4.5.0"
 
-caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001030:
-  version "1.0.30001031"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001031.tgz#76f1bdd39e19567b855302f65102d9a8aaad5930"
-  integrity sha512-DpAP5a1NGRLgYfaNCaXIRyGARi+3tJA2quZXNNA1Du26VyVkqvy2tznNu5ANyN1Y5aX44QDotZSVSUSi2uMGjg==
-
-caniuse-lite@^1.0.30001033:
+caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001030, caniuse-lite@^1.0.30001033:
   version "1.0.30001033"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001033.tgz#60c328fb56860de60f9a2cb419c31fb80587cba0"
   integrity sha512-8Ibzxee6ibc5q88cM1usPsMpJOG5CTq0s/dKOmlekPbDGKt+UrnOOTPSjQz3kVo6yL7N4SB5xd+FGLHQmbzh6A==
@@ -4307,57 +4302,7 @@ es-abstract@^1.17.0, es-abstract@^1.17.0-next.1:
     string.prototype.trimleft "^2.1.1"
     string.prototype.trimright "^2.1.1"
 
-es-dev-server@^1.23.0, es-dev-server@^1.45.1:
-  version "1.45.1"
-  resolved "https://registry.yarnpkg.com/es-dev-server/-/es-dev-server-1.45.1.tgz#469d27aaa5a8b7ec52d3c02c90866c8632aae822"
-  integrity sha512-u9FFnR5DtaoGPSlgkf6pus9MDW4RFmDCagocpapSEY3jEsDtMWtOQehY2oY5OzSWuP0dTY3rpoyj3e/cLL7VhQ==
-  dependencies:
-    "@babel/core" "^7.8.3"
-    "@babel/plugin-proposal-dynamic-import" "^7.8.3"
-    "@babel/plugin-proposal-nullish-coalescing-operator" "^7.8.3"
-    "@babel/plugin-proposal-optional-chaining" "^7.8.3"
-    "@babel/plugin-syntax-class-properties" "^7.8.3"
-    "@babel/plugin-syntax-import-meta" "^7.8.3"
-    "@babel/plugin-syntax-nullish-coalescing-operator" "^7.8.3"
-    "@babel/plugin-syntax-numeric-separator" "^7.8.3"
-    "@babel/plugin-syntax-optional-chaining" "^7.8.3"
-    "@babel/plugin-transform-template-literals" "^7.8.3"
-    "@babel/preset-env" "^7.8.3"
-    "@open-wc/building-utils" "^2.16.0"
-    "@rollup/plugin-node-resolve" "^6.1.0"
-    "@rollup/pluginutils" "^3.0.0"
-    "@types/minimatch" "^3.0.3"
-    browserslist "^4.9.1"
-    browserslist-useragent "^3.0.2"
-    builtin-modules "^3.1.0"
-    camelcase "^5.3.1"
-    caniuse-api "^3.0.0"
-    caniuse-lite "^1.0.30001033"
-    chokidar "^3.0.0"
-    command-line-args "^5.0.2"
-    command-line-usage "^6.1.0"
-    debounce "^1.2.0"
-    deepmerge "^3.2.0"
-    es-module-lexer "^0.3.13"
-    get-stream "^5.1.0"
-    is-stream "^2.0.0"
-    isbinaryfile "^4.0.2"
-    koa "^2.7.0"
-    koa-compress "^3.0.0"
-    koa-etag "^3.0.0"
-    koa-static "^5.0.0"
-    lru-cache "^5.1.1"
-    minimatch "^3.0.4"
-    opn "^5.4.0"
-    parse5 "^5.1.1"
-    path-is-inside "^1.0.2"
-    polyfills-loader "^1.5.1"
-    portfinder "^1.0.21"
-    strip-ansi "^5.2.0"
-    useragent "^2.3.0"
-    whatwg-url "^7.0.0"
-
-es-dev-server@^1.45.2:
+es-dev-server@^1.23.0, es-dev-server@^1.45.1, es-dev-server@^1.45.2:
   version "1.45.2"
   resolved "https://registry.yarnpkg.com/es-dev-server/-/es-dev-server-1.45.2.tgz#77d720c169f181d80c6feb05b40d0554f8b1f8c7"
   integrity sha512-GvpFAUnI2Rn0273gQXOkUPYKRVpfdR8EHW0QKbFQO6It2QwrNwBzDthgGGuwh1LOLCCIi0a6aLenwFEKtv2pGw==
