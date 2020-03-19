@@ -1815,16 +1815,16 @@
     eslint-plugin-no-only-tests "^2.4.0"
     eslint-plugin-wc "^1.2.0"
 
-"@open-wc/karma-esm@^2.13.18":
-  version "2.13.18"
-  resolved "https://registry.yarnpkg.com/@open-wc/karma-esm/-/karma-esm-2.13.18.tgz#818a9fc58e678fe09a7261ae0c8f9b9371df1e2a"
-  integrity sha512-WRQtDWHJU8F2sNAq/9nq47AVnFYpC0VnyoJbM/jOA4dJpYMtkCL7gu3Io7FdBKnt9+u7UoDCEgFsD2sPDYtYUA==
+"@open-wc/karma-esm@^2.13.19":
+  version "2.13.19"
+  resolved "https://registry.yarnpkg.com/@open-wc/karma-esm/-/karma-esm-2.13.19.tgz#ce7b6552d8d308984613ff070f2e32b78c5be70c"
+  integrity sha512-Cdo3WACwt5HFDgBymKSPig6A6L0g7Y+7j4k5Nha8Mg1hZRpolF+XPknaMSOWJIq0CrV2N9U96cpqitrBFbDdUA==
   dependencies:
     "@open-wc/building-utils" "^2.16.0"
     babel-plugin-istanbul "^5.1.4"
     chokidar "^3.0.0"
     deepmerge "^3.2.0"
-    es-dev-server "^1.45.1"
+    es-dev-server "^1.45.2"
     minimatch "^3.0.4"
     node-fetch "^2.6.0"
     portfinder "^1.0.21"
@@ -1863,11 +1863,11 @@
     karma-browserstack-launcher "^1.0.0"
 
 "@open-wc/testing-karma@^3.0.0", "@open-wc/testing-karma@^3.2.25":
-  version "3.3.7"
-  resolved "https://registry.yarnpkg.com/@open-wc/testing-karma/-/testing-karma-3.3.7.tgz#60139499ff66ff355c5e5c96c44c58f00f763c8e"
-  integrity sha512-k4lFU6P9DbJwsOdqAFZqzSZo5YweD3xPUF+vygC26oqw/GP7s5jSSVBxCFFUTD7Fagz63g285zmhmYSh0OZ4sQ==
+  version "3.3.8"
+  resolved "https://registry.yarnpkg.com/@open-wc/testing-karma/-/testing-karma-3.3.8.tgz#5d6c5f8b01af79e01675dfc06cae9ad7bdbb5d0a"
+  integrity sha512-3cnQapvnNV7y+2/+XLb+sf7+kVSZRWHGNxO/kwGYCJ1iO+6h8Jt0Rvy4kmRPQwT2fmVf/l0Ugj/GqbsB62DVSg==
   dependencies:
-    "@open-wc/karma-esm" "^2.13.18"
+    "@open-wc/karma-esm" "^2.13.19"
     axe-core "^3.3.1"
     karma "^4.1.0"
     karma-chrome-launcher "^3.1.0"
@@ -4307,7 +4307,7 @@ es-abstract@^1.17.0, es-abstract@^1.17.0-next.1:
     string.prototype.trimleft "^2.1.1"
     string.prototype.trimright "^2.1.1"
 
-es-dev-server@^1.23.0, es-dev-server@^1.44.0, es-dev-server@^1.45.1:
+es-dev-server@^1.23.0, es-dev-server@^1.45.1:
   version "1.45.1"
   resolved "https://registry.yarnpkg.com/es-dev-server/-/es-dev-server-1.45.1.tgz#469d27aaa5a8b7ec52d3c02c90866c8632aae822"
   integrity sha512-u9FFnR5DtaoGPSlgkf6pus9MDW4RFmDCagocpapSEY3jEsDtMWtOQehY2oY5OzSWuP0dTY3rpoyj3e/cLL7VhQ==
@@ -4357,10 +4357,10 @@ es-dev-server@^1.23.0, es-dev-server@^1.44.0, es-dev-server@^1.45.1:
     useragent "^2.3.0"
     whatwg-url "^7.0.0"
 
-es-dev-server@^1.45.1:
-  version "1.45.1"
-  resolved "https://registry.yarnpkg.com/es-dev-server/-/es-dev-server-1.45.1.tgz#469d27aaa5a8b7ec52d3c02c90866c8632aae822"
-  integrity sha512-u9FFnR5DtaoGPSlgkf6pus9MDW4RFmDCagocpapSEY3jEsDtMWtOQehY2oY5OzSWuP0dTY3rpoyj3e/cLL7VhQ==
+es-dev-server@^1.45.2:
+  version "1.45.2"
+  resolved "https://registry.yarnpkg.com/es-dev-server/-/es-dev-server-1.45.2.tgz#77d720c169f181d80c6feb05b40d0554f8b1f8c7"
+  integrity sha512-GvpFAUnI2Rn0273gQXOkUPYKRVpfdR8EHW0QKbFQO6It2QwrNwBzDthgGGuwh1LOLCCIi0a6aLenwFEKtv2pGw==
   dependencies:
     "@babel/core" "^7.8.3"
     "@babel/plugin-proposal-dynamic-import" "^7.8.3"
@@ -4404,6 +4404,7 @@ es-dev-server@^1.45.1:
     polyfills-loader "^1.5.1"
     portfinder "^1.0.21"
     strip-ansi "^5.2.0"
+    systemjs "^4.0.0"
     useragent "^2.3.0"
     whatwg-url "^7.0.0"
 
@@ -8544,28 +8545,6 @@ polished@^3.3.1:
   integrity sha512-9Rch6iMZckABr6EFCLPZsxodeBpXMo9H4fRlfR/9VjMEyy5xpo1/WgXlJGgSjPyVhEZNycbW7UmYMNyWS5MI0g==
   dependencies:
     "@babel/runtime" "^7.6.3"
-
-polyfills-loader@^1.5.1:
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/polyfills-loader/-/polyfills-loader-1.5.1.tgz#d808790bf5701b66d2adffe306e5f929496396d5"
-  integrity sha512-HIFEn/SggO+RHVLySvM8jIVqXu7p5VG67vDNHWagd0y8CGoqCzE57Nq1XuuJ2pHKcS82tkfOA/LRPBLZjgLd4g==
-  dependencies:
-    "@babel/core" "^7.8.3"
-    "@open-wc/building-utils" "^2.16.0"
-    "@webcomponents/webcomponentsjs" "^2.4.0"
-    abortcontroller-polyfill "^1.4.0"
-    core-js-bundle "^3.6.0"
-    deepmerge "^3.2.0"
-    dynamic-import-polyfill "^0.1.1"
-    es-module-shims "^0.4.6"
-    html-minifier "^4.0.0"
-    intersection-observer "^0.7.0"
-    parse5 "^5.1.1"
-    regenerator-runtime "^0.13.3"
-    resize-observer-polyfill "^1.5.1"
-    systemjs "^4.0.0"
-    terser "^4.6.4"
-    whatwg-fetch "^3.0.0"
 
 polyfills-loader@^1.5.1:
   version "1.5.1"
