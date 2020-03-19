@@ -1572,10 +1572,10 @@
   dependencies:
     "@material/feature-targeting" "5.0.0-canary.a1a0deb3e.0"
 
-"@mdjs/core@^0.1.4":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@mdjs/core/-/core-0.1.4.tgz#d1632f80cf82d3be4275b84be49a9c5ae6530754"
-  integrity sha512-7DKV1o+pI+2PKnDUKomhSXxOJrN8CL1eyDvfnIW0yRSCIpkzXb28Jv/ML/J15Va9v+uzIEGtTXl/wv2PmqkFBw==
+"@mdjs/core@^0.1.5":
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/@mdjs/core/-/core-0.1.5.tgz#e8e3c242962dfe67074d70abc70ab229dae58c56"
+  integrity sha512-bAoYAzgVKASgUSJQDEFcpl0X7WpZ0kBsH1kJEWb0P72JFDE23+IA0Ki7Nyr80gwjC7vGJY6VkbUrcSl6SDAg2g==
   dependencies:
     "@mdjs/mdjs-preview" "^0.0.1"
     "@mdjs/mdjs-story" "^0.0.1"
@@ -1651,10 +1651,10 @@
   resolved "https://registry.yarnpkg.com/@mdx-js/util/-/util-1.5.3.tgz#49f939313a8561814ef72c231257865aa127ca55"
   integrity sha512-OXeOtHO+eN50QlIkm4Vj4vqNGtowv4FH9L21WvcbEM0eeZrb7aANiFTN70lBQEXcucxCMRkd/6IA9LxhotZEQw==
 
-"@open-wc/building-rollup@^0.22.7":
-  version "0.22.7"
-  resolved "https://registry.yarnpkg.com/@open-wc/building-rollup/-/building-rollup-0.22.7.tgz#11900c2a3ac156be6b6b833d667dacc9cb25fe44"
-  integrity sha512-O1Ft3H/kP/lW/0agOfayQAuI5mJ8oNPkGb/VKzNUzTuH26q1VpQhb1hYXwqYth/l1ZiVZra623LN5QtHoLQqiA==
+"@open-wc/building-rollup@^0.22.8":
+  version "0.22.8"
+  resolved "https://registry.yarnpkg.com/@open-wc/building-rollup/-/building-rollup-0.22.8.tgz#7ceea96afb73baa40cf262513b27259a4e106b10"
+  integrity sha512-LEQvWNB5pKth3kblz9EORT4aZ4KZs9R7nYMQZns/Rn+ehhn7Jl9I3bUxE6PsUiYhYAtrLdW140E3jQKhAsTJkA==
   dependencies:
     "@babel/core" "^7.8.3"
     "@babel/plugin-proposal-nullish-coalescing-operator" "^7.8.3"
@@ -1711,20 +1711,20 @@
     "@open-wc/semantic-dom-diff" "^0.13.16"
     "@types/chai" "^4.1.7"
 
-"@open-wc/demoing-storybook@^1.0.1", "@open-wc/demoing-storybook@^1.13.5":
-  version "1.13.5"
-  resolved "https://registry.yarnpkg.com/@open-wc/demoing-storybook/-/demoing-storybook-1.13.5.tgz#e6dbab413481928a5ab4f6ba11587c4be06a9e1d"
-  integrity sha512-VZvrUTs0/b8T891C/ZZqNRFoXqIA2Km7yN/H+bOUag34hprqOL/aNXji4uWbszTjzDXX827TqWVa34fR7/WZgA==
+"@open-wc/demoing-storybook@^1.0.1", "@open-wc/demoing-storybook@^1.13.6":
+  version "1.13.6"
+  resolved "https://registry.yarnpkg.com/@open-wc/demoing-storybook/-/demoing-storybook-1.13.6.tgz#27c602d29fcb2b522a744da06cfd757d7df3648d"
+  integrity sha512-GbLy2wSmpOK9gnG9w5aw/XKcN+xd9iFChZs0Mh7iNJO3Pr8LS1ens2NxxPyMr1ddSzVMXnJv05+y8+TupWdyBQ==
   dependencies:
     "@babel/core" "^7.8.3"
     "@babel/plugin-transform-react-jsx" "^7.8.3"
     "@mdx-js/mdx" "^1.5.1"
-    "@open-wc/building-rollup" "^0.22.7"
+    "@open-wc/building-rollup" "^0.22.8"
     "@storybook/addon-docs" "5.3.1"
     command-line-args "^5.0.2"
     command-line-usage "^6.1.0"
     deepmerge "^3.2.0"
-    es-dev-server "^1.45.1"
+    es-dev-server "^1.45.2"
     es-module-lexer "^0.3.13"
     fs-extra "^8.1.0"
     glob "^7.1.3"
@@ -1732,7 +1732,7 @@
     magic-string "^0.25.4"
     rollup "^1.31.1"
     rollup-plugin-index-html "^1.10.3"
-    storybook-addon-markdown-docs "^0.1.5"
+    storybook-addon-markdown-docs "^0.1.6"
     storybook-prebuilt "^1.5.0"
 
 "@open-wc/eslint-config@^2.0.0":
@@ -4237,7 +4237,7 @@ es-abstract@^1.17.0, es-abstract@^1.17.0-next.1:
     string.prototype.trimleft "^2.1.1"
     string.prototype.trimright "^2.1.1"
 
-es-dev-server@^1.23.0, es-dev-server@^1.45.1, es-dev-server@^1.45.2:
+es-dev-server@^1.23.0, es-dev-server@^1.45.2:
   version "1.45.2"
   resolved "https://registry.yarnpkg.com/es-dev-server/-/es-dev-server-1.45.2.tgz#77d720c169f181d80c6feb05b40d0554f8b1f8c7"
   integrity sha512-GvpFAUnI2Rn0273gQXOkUPYKRVpfdR8EHW0QKbFQO6It2QwrNwBzDthgGGuwh1LOLCCIi0a6aLenwFEKtv2pGw==
@@ -10022,19 +10022,19 @@ store2@^2.7.1:
   resolved "https://registry.yarnpkg.com/store2/-/store2-2.10.0.tgz#46b82bb91878daf1b0d56dec2f1d41e54d5103cf"
   integrity sha512-tWEpK0snS2RPUq1i3R6OahfJNjWCQYNxq0+by1amCSuw0mXtymJpzmZIeYpA1UAa+7B0grCpNYIbDcd7AgTbFg==
 
-storybook-addon-markdown-docs@^0.1.5:
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/storybook-addon-markdown-docs/-/storybook-addon-markdown-docs-0.1.5.tgz#251f9bd459dd6c4729fe735ec9d9e059136735b5"
-  integrity sha512-jLxyU7dcwEEHMlJYGEXDe0P1+gQldcwQpmt62bFvQevqZsEv6xCUDVLMXGQ4wUmwg/sstunxbM+fpP0sNf5GgA==
+storybook-addon-markdown-docs@^0.1.6:
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/storybook-addon-markdown-docs/-/storybook-addon-markdown-docs-0.1.6.tgz#29eea9a0fed6a6c2eb0b28715457aac2600f3f14"
+  integrity sha512-9xrYe1ScLXBQtZMSP+ax/yRdKDqy5p9LhHhXeRsKluHkBz9/rmtvP9MVaIPUa5cf1iS2uCnNBL3ndU25DW1Ajg==
   dependencies:
     "@babel/code-frame" "^7.8.3"
     "@babel/core" "^7.8.3"
     "@babel/generator" "^7.8.4"
     "@babel/parser" "^7.8.4"
     "@babel/plugin-syntax-import-meta" "^7.8.3"
-    "@mdjs/core" "^0.1.4"
+    "@mdjs/core" "^0.1.5"
     "@mdx-js/mdx" "^1.5.1"
-    "@open-wc/demoing-storybook" "^1.13.5"
+    "@open-wc/demoing-storybook" "^1.13.6"
     "@storybook/addon-docs" "5.3.1"
     detab "^2.0.3"
     remark-html "^10.0.0"
