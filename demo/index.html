@@ -19,6 +19,7 @@
   lit-place-input {
     width: -webkit-fill-available;
   }
+
   </style>
 </head>
 <body>
@@ -32,7 +33,7 @@
       html`
         <lit-place-input class="left right" 
         helper="Almost there!"
-        .searchType="establishment"  .apiKey=${"AIzaSyCQjwnft-x6cXQYDkGNYBzaevanW3mVNBA"} label="Choose your gym"
+        .searchType="establishment" .apiKey=${"AIzaSyCQjwnft-x6cXQYDkGNYBzaevanW3mVNBA"} label="Choose your gym"
         @place-changed=${_=>console.log('place changed',_.detail.place)}
         outlined>
       </lit-place-input>

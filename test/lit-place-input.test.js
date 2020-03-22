@@ -3,45 +3,35 @@ import { html, fixture, expect } from '@open-wc/testing';
 import '../lit-place-input.js';
 
 describe('LitPlaceInput', () => {
-  it('has a default title "Hey there" and counter 5', async () => {
+  it('has a label "Choose Place" and shows API Error', async () => {
     const el = await fixture(html`
       <lit-place-input></lit-place-input>
     `);
 
-    expect(el.title).to.equal('Hey there');
-    expect(el.counter).to.equal(5);
+    expect(el.label).to.equal('Please use valid API Key');
+    expect(el.disabled).to.equal(true);
   });
 
-  it('increases the counter on button click', async () => {
+  it('has a default label "Choose Place" with valid api key', async () => {
     const el = await fixture(html`
-      <lit-place-input></lit-place-input>
+      <lit-place-input .apiKey=${"AIzaSyCQjwnft-x6cXQYDkGNYBzaevanW3mVNBA"} ></lit-place-input>
     `);
-    el.shadowRoot.querySelector('button').click();
-
-    expect(el.counter).to.equal(6);
+    expect(el.label).to.equal('Choose Place');
   });
 
-  it('can override the title via attribute', async () => {
+  it('can override the label via attribute', async () => {
     const el = await fixture(html`
-      <lit-place-input title="attribute title"></lit-place-input>
+      <lit-place-input .apiKey=${"AIzaSyCQjwnft-x6cXQYDkGNYBzaevanW3mVNBA"} label="attribute label" ></lit-place-input>
     `);
 
-    expect(el.title).to.equal('attribute title');
+    expect(el.label).to.equal('attribute label');
   });
 
-  it('shows initially the text "hey there Nr. 5!" and an "increment" button', async () => {
-    const el = await fixture(html`
-      <lit-place-input></lit-place-input>
-    `);
+  // it('passes the a11y audit', async () => {
+  //   const el = await fixture(html`
+  //     <lit-place-input></lit-place-input>
+  //   `);
 
-    expect(el).shadowDom.to.equalSnapshot();
-  });
-
-  it('passes the a11y audit', async () => {
-    const el = await fixture(html`
-      <lit-place-input></lit-place-input>
-    `);
-
-    await expect(el).shadowDom.to.be.accessible();
-  });
+  //   await expect(el).shadowDom.to.be.accessible();
+  // });
 });

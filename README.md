@@ -18,9 +18,9 @@ Checkout the [Storybook here  ↗](https://smashah.github.io/lit-place-input/)
 ## Installation
 
 ```bash
-npm i lit-place-input
+> npm i lit-place-input
 Or
-yarn add lit-place-input
+> yarn add lit-place-input
 ```
 
 then import

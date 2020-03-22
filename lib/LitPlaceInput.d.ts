@@ -26,7 +26,7 @@ declare class LitPlaceInput extends TextField {
     _value: any;
     constructor();
     updated(changedProperties: any): void;
-    readonly root: this | ShadowRoot;
+    get root(): this | ShadowRoot;
     gbid(tag: string): any;
     firstUpdated(): Promise<void>;
     _mapsApiLoaded(): void;

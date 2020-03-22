@@ -1,6 +1,6 @@
 {
   "name": "lit-place-input",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A simple and fully customizable place autocomplete component extending @mwc-textfield, following open-wc recommendations",
   "author": "Mohammed Shah <@smashah>",
   "license": "MIT",
@@ -27,13 +27,14 @@
   },
   "dependencies": {
     "@google-web-components/google-apis": "^3.0.1",
-    "@material/mwc-icon": "^0.14.0",
+    "@material/mwc-icon": "0.10.0",
     "@material/mwc-textfield": "^0.14.0",
     "@storybook/storybook-deployer": "^2.8.1",
     "lit-element": "^2.2.1",
     "lit-html": "^1.1.2",
     "request": "^2.88.0",
-    "request-promise-native": "^1.0.8"
+    "request-promise-native": "^1.0.8",
+    "tslib": "^1.11.1"
   },
   "devDependencies": {
     "@open-wc/demoing-storybook": "^1.0.1",
@@ -55,11 +56,6 @@
     ]
   },
   "prettier": "@open-wc/prettier-config",
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "*.js": [
       "eslint --fix",

@@ -67,6 +67,7 @@ class LitPlaceInput extends TextField {
 
   constructor() {
     super();
+    this.label = 'Choose Place';
     this.validationMessage = 'Invalid - please select a place';
     this.icon = 'place';
   }
@@ -117,6 +118,10 @@ class LitPlaceInput extends TextField {
     super.firstUpdated();
     const gmaps: any = document.createElement('google-maps-api');
     gmaps.apiKey = this.apiKey;
+    if (!this.apiKey) {
+      this.label = 'Please use valid API Key';
+      this.disabled = true;
+    }
     gmaps.version = '3.exp';
     gmaps.id = 'gmaps-api';
     gmaps.addEventListener(
