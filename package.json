@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "@google-web-components/google-apis": "^3.0.1",
-    "@material/mwc-icon": "0.10.0",
+    "@material/mwc-icon": "0.14.1",
     "@material/mwc-textfield": "^0.14.0",
     "lit-element": "^2.2.1",
     "lit-html": "^1.1.2",
