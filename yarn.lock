@@ -1919,14 +1919,7 @@
     is-module "^1.0.0"
     resolve "^1.14.2"
 
-"@rollup/pluginutils@^3.0.0":
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/@rollup/pluginutils/-/pluginutils-3.0.2.tgz#78a8b7c614315b40784846ad0c8e67ca52385965"
-  integrity sha512-OOpWfnOaveki8sI5MEY20jCxVuKTPpIYRGa5dkN3RwEHX6LZM3HwAsT4yalds5CZAGzkCnbnOUz8rxXIyTm2yQ==
-  dependencies:
-    estree-walker "^0.6.1"
-
-"@rollup/pluginutils@^3.0.8":
+"@rollup/pluginutils@^3.0.0", "@rollup/pluginutils@^3.0.8":
   version "3.0.9"
   resolved "https://registry.yarnpkg.com/@rollup/pluginutils/-/pluginutils-3.0.9.tgz#aa6adca2c45e5a1b950103a999e3cddfe49fd775"
   integrity sha512-TLZavlfPAZYI7v33wQh4mTP6zojne14yok3DNSLcjoG/Hirxfkonn6icP5rrNWRn8nZsirJBFFpijVOJzkUHDg==
