@@ -1694,10 +1694,10 @@
   resolved "https://registry.yarnpkg.com/@mdx-js/util/-/util-1.5.3.tgz#49f939313a8561814ef72c231257865aa127ca55"
   integrity sha512-OXeOtHO+eN50QlIkm4Vj4vqNGtowv4FH9L21WvcbEM0eeZrb7aANiFTN70lBQEXcucxCMRkd/6IA9LxhotZEQw==
 
-"@open-wc/building-utils@^2.16.3":
-  version "2.16.3"
-  resolved "https://registry.yarnpkg.com/@open-wc/building-utils/-/building-utils-2.16.3.tgz#f512d68198c31458849c79111fa9d3f24f03049d"
-  integrity sha512-lO/HD2wEl2avRSgqISeP4S1zPQEGRQ/+Zh8RBk9AggDma3uPiRU0RbuRvhunmu7hFWVDBj5o1FRJ7xJ94AWCnw==
+"@open-wc/building-utils@^2.16.3", "@open-wc/building-utils@^2.16.4":
+  version "2.16.4"
+  resolved "https://registry.yarnpkg.com/@open-wc/building-utils/-/building-utils-2.16.4.tgz#10d64e0d2b92c017caf47a57991f8b1eef91c634"
+  integrity sha512-ByknIanbo2wSpNs7gHy/hBHmPOO91IOJCDravSNreK88XdTd4vnCkx0DrRltgwvPIg7GVHWv/NFfSfWecRrh4Q==
   dependencies:
     "@babel/core" "^7.9.0"
     "@babel/plugin-syntax-dynamic-import" "^7.8.3"
@@ -4115,9 +4115,9 @@ es-abstract@^1.17.0, es-abstract@^1.17.0-next.1:
     string.prototype.trimright "^2.1.1"
 
 es-dev-server@^1.23.0, es-dev-server@^1.46.2:
-  version "1.46.2"
-  resolved "https://registry.yarnpkg.com/es-dev-server/-/es-dev-server-1.46.2.tgz#f2a17cc7a5dab1e8a7fa212b586cb51f3abea32f"
-  integrity sha512-pqJ1bejSEbcxXFcMi4egkLaLWg5ASaxNeSRiGS9vpxu3S5f0aWX8XgYwifT6VeBpEHalkwb10prm/nvDCZKQlw==
+  version "1.46.4"
+  resolved "https://registry.yarnpkg.com/es-dev-server/-/es-dev-server-1.46.4.tgz#eca4bd719ff2ee9e0077d0379ce84e5457f7509a"
+  integrity sha512-8K9CSbKMT+nntN7kW1UHn4tT3AkB3vXxQVw74CudOBtUsyTWbSdMMaRKpfp3BqVumbeJeGF1LTsb7OejtZJOug==
   dependencies:
     "@babel/core" "^7.9.0"
     "@babel/plugin-proposal-dynamic-import" "^7.8.3"
@@ -4130,7 +4130,7 @@ es-dev-server@^1.23.0, es-dev-server@^1.46.2:
     "@babel/plugin-syntax-optional-chaining" "^7.8.3"
     "@babel/plugin-transform-template-literals" "^7.8.3"
     "@babel/preset-env" "^7.9.0"
-    "@open-wc/building-utils" "^2.16.3"
+    "@open-wc/building-utils" "^2.16.4"
     "@rollup/plugin-node-resolve" "^7.1.1"
     "@rollup/pluginutils" "^3.0.0"
     "@types/minimatch" "^3.0.3"
@@ -4158,7 +4158,7 @@ es-dev-server@^1.23.0, es-dev-server@^1.46.2:
     opn "^5.4.0"
     parse5 "^5.1.1"
     path-is-inside "^1.0.2"
-    polyfills-loader "^1.5.4"
+    polyfills-loader "^1.5.5"
     portfinder "^1.0.21"
     strip-ansi "^5.2.0"
     systemjs "^4.0.0"
@@ -7755,13 +7755,13 @@ polished@^3.3.1:
   dependencies:
     "@babel/runtime" "^7.6.3"
 
-polyfills-loader@^1.5.4:
-  version "1.5.4"
-  resolved "https://registry.yarnpkg.com/polyfills-loader/-/polyfills-loader-1.5.4.tgz#2ec7327cff00c0c596e99d774d00099ce1554b34"
-  integrity sha512-Jttph/AKpsmtw5+HGeCqZYaKTYZ3WswVgnTuSzUZOpChSETXiYQ1eihMiTfPIoD9FpIsTb7Ow0VHTFChBvzw9g==
+polyfills-loader@^1.5.4, polyfills-loader@^1.5.5:
+  version "1.5.5"
+  resolved "https://registry.yarnpkg.com/polyfills-loader/-/polyfills-loader-1.5.5.tgz#a4b605e9066841c52596fd1b401222ab74a45d4b"
+  integrity sha512-Rn+zv8e0OVVSEN8w8yhFmjyDoBGiGZQtzlHGm17HfCYjgzuMpnGME12g55ALDuCUfU1inqKtDiqc6XVsoGcpYA==
   dependencies:
     "@babel/core" "^7.9.0"
-    "@open-wc/building-utils" "^2.16.3"
+    "@open-wc/building-utils" "^2.16.4"
     "@webcomponents/webcomponentsjs" "^2.4.0"
     abortcontroller-polyfill "^1.4.0"
     core-js-bundle "^3.6.0"
