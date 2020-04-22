@@ -1726,38 +1726,6 @@
     whatwg-fetch "^3.0.0"
     whatwg-url "^7.0.0"
 
-"@open-wc/building-utils@^2.16.4":
-  version "2.16.4"
-  resolved "https://registry.yarnpkg.com/@open-wc/building-utils/-/building-utils-2.16.4.tgz#10d64e0d2b92c017caf47a57991f8b1eef91c634"
-  integrity sha512-ByknIanbo2wSpNs7gHy/hBHmPOO91IOJCDravSNreK88XdTd4vnCkx0DrRltgwvPIg7GVHWv/NFfSfWecRrh4Q==
-  dependencies:
-    "@babel/core" "^7.9.0"
-    "@babel/plugin-syntax-dynamic-import" "^7.8.3"
-    "@webcomponents/shadycss" "^1.9.4"
-    "@webcomponents/webcomponentsjs" "^2.4.0"
-    arrify "^2.0.1"
-    browserslist "^4.9.1"
-    chokidar "^3.0.0"
-    clean-css "^4.2.1"
-    clone "^2.1.2"
-    core-js-bundle "^3.6.0"
-    deepmerge "^4.2.2"
-    es-module-shims "^0.4.6"
-    html-minifier "^4.0.0"
-    lru-cache "^5.1.1"
-    minimatch "^3.0.4"
-    parse5 "^5.1.1"
-    path-is-inside "^1.0.2"
-    regenerator-runtime "^0.13.3"
-    resolve "^1.11.1"
-    rimraf "^3.0.2"
-    shady-css-scoped-element "^0.0.2"
-    systemjs "^4.0.0"
-    terser "^4.6.7"
-    valid-url "^1.0.9"
-    whatwg-fetch "^3.0.0"
-    whatwg-url "^7.0.0"
-
 "@open-wc/chai-dom-equals@^0.12.36":
   version "0.12.36"
   resolved "https://registry.yarnpkg.com/@open-wc/chai-dom-equals/-/chai-dom-equals-0.12.36.tgz#ed0eb56b9e98c4d7f7280facce6215654aae9f4c"
@@ -4114,10 +4082,10 @@ es-abstract@^1.17.0, es-abstract@^1.17.0-next.1:
     string.prototype.trimleft "^2.1.1"
     string.prototype.trimright "^2.1.1"
 
-es-dev-server@^1.23.0, es-dev-server@^1.46.2:
-  version "1.46.4"
-  resolved "https://registry.yarnpkg.com/es-dev-server/-/es-dev-server-1.46.4.tgz#eca4bd719ff2ee9e0077d0379ce84e5457f7509a"
-  integrity sha512-8K9CSbKMT+nntN7kW1UHn4tT3AkB3vXxQVw74CudOBtUsyTWbSdMMaRKpfp3BqVumbeJeGF1LTsb7OejtZJOug==
+es-dev-server@^1.23.0, es-dev-server@^1.46.2, es-dev-server@^1.46.4:
+  version "1.46.5"
+  resolved "https://registry.yarnpkg.com/es-dev-server/-/es-dev-server-1.46.5.tgz#8eea5b07f470721eff6416fd1d6d5007ed6b573f"
+  integrity sha512-LYLRyDbNGvKqBZEuTfTAT8aAEhb0ns0+NBGD+aje+VyxvUTiEUvpFGIzonzZhwiZFCxmDsdR+8q92j7gZzBZAQ==
   dependencies:
     "@babel/core" "^7.9.0"
     "@babel/plugin-proposal-dynamic-import" "^7.8.3"
@@ -4158,58 +4126,7 @@ es-dev-server@^1.23.0, es-dev-server@^1.46.2:
     opn "^5.4.0"
     parse5 "^5.1.1"
     path-is-inside "^1.0.2"
-    polyfills-loader "^1.5.5"
-    portfinder "^1.0.21"
-    strip-ansi "^5.2.0"
-    systemjs "^4.0.0"
-    useragent "^2.3.0"
-    whatwg-url "^7.0.0"
-
-es-dev-server@^1.46.4:
-  version "1.46.4"
-  resolved "https://registry.yarnpkg.com/es-dev-server/-/es-dev-server-1.46.4.tgz#eca4bd719ff2ee9e0077d0379ce84e5457f7509a"
-  integrity sha512-8K9CSbKMT+nntN7kW1UHn4tT3AkB3vXxQVw74CudOBtUsyTWbSdMMaRKpfp3BqVumbeJeGF1LTsb7OejtZJOug==
-  dependencies:
-    "@babel/core" "^7.9.0"
-    "@babel/plugin-proposal-dynamic-import" "^7.8.3"
-    "@babel/plugin-proposal-nullish-coalescing-operator" "^7.8.3"
-    "@babel/plugin-proposal-optional-chaining" "^7.9.0"
-    "@babel/plugin-syntax-class-properties" "^7.8.3"
-    "@babel/plugin-syntax-import-meta" "^7.8.3"
-    "@babel/plugin-syntax-nullish-coalescing-operator" "^7.8.3"
-    "@babel/plugin-syntax-numeric-separator" "^7.8.3"
-    "@babel/plugin-syntax-optional-chaining" "^7.8.3"
-    "@babel/plugin-transform-template-literals" "^7.8.3"
-    "@babel/preset-env" "^7.9.0"
-    "@open-wc/building-utils" "^2.16.4"
-    "@rollup/plugin-node-resolve" "^7.1.1"
-    "@rollup/pluginutils" "^3.0.0"
-    "@types/minimatch" "^3.0.3"
-    browserslist "^4.9.1"
-    browserslist-useragent "^3.0.2"
-    builtin-modules "^3.1.0"
-    camelcase "^5.3.1"
-    caniuse-api "^3.0.0"
-    caniuse-lite "^1.0.30001033"
-    chokidar "^3.0.0"
-    command-line-args "^5.0.2"
-    command-line-usage "^6.1.0"
-    debounce "^1.2.0"
-    deepmerge "^4.2.2"
-    es-module-lexer "^0.3.13"
-    get-stream "^5.1.0"
-    is-stream "^2.0.0"
-    isbinaryfile "^4.0.2"
-    koa "^2.7.0"
-    koa-compress "^3.0.0"
-    koa-etag "^3.0.0"
-    koa-static "^5.0.0"
-    lru-cache "^5.1.1"
-    minimatch "^3.0.4"
-    opn "^5.4.0"
-    parse5 "^5.1.1"
-    path-is-inside "^1.0.2"
-    polyfills-loader "^1.5.5"
+    polyfills-loader "^1.5.6"
     portfinder "^1.0.21"
     strip-ansi "^5.2.0"
     systemjs "^4.0.0"
@@ -7755,32 +7672,10 @@ polished@^3.3.1:
   dependencies:
     "@babel/runtime" "^7.6.3"
 
-polyfills-loader@^1.5.4, polyfills-loader@^1.5.5:
-  version "1.5.5"
-  resolved "https://registry.yarnpkg.com/polyfills-loader/-/polyfills-loader-1.5.5.tgz#a4b605e9066841c52596fd1b401222ab74a45d4b"
-  integrity sha512-Rn+zv8e0OVVSEN8w8yhFmjyDoBGiGZQtzlHGm17HfCYjgzuMpnGME12g55ALDuCUfU1inqKtDiqc6XVsoGcpYA==
-  dependencies:
-    "@babel/core" "^7.9.0"
-    "@open-wc/building-utils" "^2.16.4"
-    "@webcomponents/webcomponentsjs" "^2.4.0"
-    abortcontroller-polyfill "^1.4.0"
-    core-js-bundle "^3.6.0"
-    deepmerge "^4.2.2"
-    dynamic-import-polyfill "^0.1.1"
-    es-module-shims "^0.4.6"
-    html-minifier "^4.0.0"
-    intersection-observer "^0.7.0"
-    parse5 "^5.1.1"
-    regenerator-runtime "^0.13.3"
-    resize-observer-polyfill "^1.5.1"
-    systemjs "^4.0.0"
-    terser "^4.6.7"
-    whatwg-fetch "^3.0.0"
-
-polyfills-loader@^1.5.5:
-  version "1.5.5"
-  resolved "https://registry.yarnpkg.com/polyfills-loader/-/polyfills-loader-1.5.5.tgz#a4b605e9066841c52596fd1b401222ab74a45d4b"
-  integrity sha512-Rn+zv8e0OVVSEN8w8yhFmjyDoBGiGZQtzlHGm17HfCYjgzuMpnGME12g55ALDuCUfU1inqKtDiqc6XVsoGcpYA==
+polyfills-loader@^1.5.4, polyfills-loader@^1.5.6:
+  version "1.5.6"
+  resolved "https://registry.yarnpkg.com/polyfills-loader/-/polyfills-loader-1.5.6.tgz#5bfd107ebeaaab19da84dfeeb3811fc41a49b29e"
+  integrity sha512-01tVO5O0iEX1Pzhamoy24trXmjS75WsqqtcRvMVeg3FnXcB9BPTtkNtiiPh3LWYDQBS+mlngCDxglXK1629jsQ==
   dependencies:
     "@babel/core" "^7.9.0"
     "@open-wc/building-utils" "^2.16.4"
