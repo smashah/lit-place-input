@@ -1734,6 +1734,11 @@
     "@open-wc/semantic-dom-diff" "^0.13.16"
     "@types/chai" "^4.1.7"
 
+"@open-wc/dedupe-mixin@^1.2.17":
+  version "1.2.17"
+  resolved "https://registry.yarnpkg.com/@open-wc/dedupe-mixin/-/dedupe-mixin-1.2.17.tgz#50fb903fc8785639487d7987caae45d7bba08ec7"
+  integrity sha512-9A3WohqNxEloJa4y1DuBL5zH12cNRNW1vsrkiaLMnOGuQdhibs2XY1oliudsKpvIeNjDXRVRPUdIIzn65BypCw==
+
 "@open-wc/demoing-storybook@^2.0.0":
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/@open-wc/demoing-storybook/-/demoing-storybook-2.1.1.tgz#3167f189573795f6024322b86b4150764ffe5966"
@@ -1825,20 +1830,32 @@
     "@open-wc/rollup-plugin-html" "^1.0.2"
     polyfills-loader "^1.5.6"
 
+"@open-wc/scoped-elements@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@open-wc/scoped-elements/-/scoped-elements-1.1.1.tgz#732744dac4d029ffacdeb169d85855714eda9d0c"
+  integrity sha512-Fx9bFOA14xGeNFQpSeyp6GmqW1vJyETr1qlem9pDS3hlK/HpWUtoBRAPyo4yexjY+aeSsenUeAYDXzPWQgeWXw==
+  dependencies:
+    "@open-wc/dedupe-mixin" "^1.2.17"
+    lit-html "^1.0.0"
+
 "@open-wc/semantic-dom-diff@^0.13.16":
   version "0.13.21"
   resolved "https://registry.yarnpkg.com/@open-wc/semantic-dom-diff/-/semantic-dom-diff-0.13.21.tgz#718b9ec5f9a98935fc775e577ad094ae8d8b7dea"
   integrity sha512-BONpjHcGX2zFa9mfnwBCLEmlDsOHzT+j6Qt1yfK3MzFXFtAykfzFjAgaxPetu0YbBlCfXuMlfxI4vlRGCGMvFg==
 
-"@open-wc/semantic-dom-diff@^0.17.8":
-  version "0.17.8"
-  resolved "https://registry.yarnpkg.com/@open-wc/semantic-dom-diff/-/semantic-dom-diff-0.17.8.tgz#e240d71d6ffefd9c65ed342faf684170788c4ec7"
-  integrity sha512-wYk9REynp75vgfH3gh1p0718K0wjiV04g+wjGtc+nzx+ChXRO9U2W7JTCniRBG8fAW2rBhzkS0GVQs8kLhjK6w==
+"@open-wc/semantic-dom-diff@^0.17.9":
+  version "0.17.9"
+  resolved "https://registry.yarnpkg.com/@open-wc/semantic-dom-diff/-/semantic-dom-diff-0.17.9.tgz#15ed61dfdf7a01ebbf21755527e25c90c78bf5e2"
+  integrity sha512-wO4xM3FhLmGGZM3wDexUPFb55tqVX45LJQ9l3uNKj1Roi0/aV1KjIohdE2J0zUJivfCxAWo1Dy45hNkCHO4CVA==
+  dependencies:
+    "@types/chai" "^4.2.11"
 
-"@open-wc/testing-helpers@^1.7.2":
-  version "1.7.2"
-  resolved "https://registry.yarnpkg.com/@open-wc/testing-helpers/-/testing-helpers-1.7.2.tgz#b53e7082cd946db9b598b4d72c5a087d6649ff22"
-  integrity sha512-ilUdoObOTu9IO8cbv7MiLGEpmoIl6+31OFblOfq7UseqL8+KId88spqhUFc3UToX429HHypsUVuKHFfEST3oXw==
+"@open-wc/testing-helpers@^1.8.1":
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/@open-wc/testing-helpers/-/testing-helpers-1.8.1.tgz#e523352f911f273dc4d7cfc2405c8eb886f0be59"
+  integrity sha512-gvTD5BrXdm0LEZbuy/4XweDjbdTsmZVpuK2172lkwCmoia1VaMvWL1iO7mBWZiACK5SJnBSWy6VX2GkaDHcUoQ==
+  dependencies:
+    "@open-wc/scoped-elements" "^1.1.1"
 
 "@open-wc/testing-karma-bs@^1.0.0":
   version "1.3.58"
@@ -1871,14 +1888,14 @@
     mocha "^6.2.2"
 
 "@open-wc/testing@^2.0.0":
-  version "2.5.13"
-  resolved "https://registry.yarnpkg.com/@open-wc/testing/-/testing-2.5.13.tgz#4d71be356b2285ebb88721744bdb6d34b00b5b2a"
-  integrity sha512-LdAt3yZFM4nLjuGp0l189/2CJ8x1BHA0qt6cw9cq3WojwWSS4iFX8wWGl31+Lkzg3a+y5D6QbMRWpZOaTyTL9g==
+  version "2.5.15"
+  resolved "https://registry.yarnpkg.com/@open-wc/testing/-/testing-2.5.15.tgz#3062c17e2aca05e58c33a36b0bb2e0a3941a692a"
+  integrity sha512-rXuwa3Kf7NE7jhoYgzJVNDQQKb8guWLUCxOrhZcX0QaYIaDbNhierxLtbrpu9z78Y5PvcbwaH+ekO2jO44lxfQ==
   dependencies:
     "@open-wc/chai-dom-equals" "^0.12.36"
-    "@open-wc/semantic-dom-diff" "^0.17.8"
-    "@open-wc/testing-helpers" "^1.7.2"
-    "@types/chai" "^4.1.7"
+    "@open-wc/semantic-dom-diff" "^0.17.9"
+    "@open-wc/testing-helpers" "^1.8.1"
+    "@types/chai" "^4.2.11"
     "@types/chai-dom" "^0.0.9"
     "@types/mocha" "^5.0.0"
     "@types/sinon-chai" "^3.2.3"
@@ -2160,10 +2177,10 @@
   dependencies:
     "@types/chai" "*"
 
-"@types/chai@*", "@types/chai@^4.1.7":
-  version "4.2.7"
-  resolved "https://registry.yarnpkg.com/@types/chai/-/chai-4.2.7.tgz#1c8c25cbf6e59ffa7d6b9652c78e547d9a41692d"
-  integrity sha512-luq8meHGYwvky0O7u0eQZdA7B4Wd9owUCqvbw2m3XCrCU8mplYOujMBbvyS547AxJkC+pGnd0Cm15eNxEUNU8g==
+"@types/chai@*", "@types/chai@^4.1.7", "@types/chai@^4.2.11":
+  version "4.2.11"
+  resolved "https://registry.yarnpkg.com/@types/chai/-/chai-4.2.11.tgz#d3614d6c5f500142358e6ed24e1bf16657536c50"
+  integrity sha512-t7uW6eFafjO+qJ3BIV2gGUyZs27egcNRkUdalkud+Qa3+kg//f129iuOFivHDXQ+vnU3fDXuwgv0cqMCbcE8sw==
 
 "@types/clean-css@*":
   version "4.2.1"
