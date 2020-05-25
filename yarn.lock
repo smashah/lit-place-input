@@ -3273,9 +3273,9 @@ es-abstract@^1.17.0, es-abstract@^1.17.0-next.1:
     string.prototype.trimright "^2.1.1"
 
 es-dev-server@^1.23.0, es-dev-server@^1.50.8:
-  version "1.50.8"
-  resolved "https://registry.yarnpkg.com/es-dev-server/-/es-dev-server-1.50.8.tgz#2dca6f1bed813de27f04127be4d07cee6832c376"
-  integrity sha512-4WLNKsIrUAC5wpkqo3v/4EWOM9SGdj5abtFhc2tKgfSjli4vcgbOQgcxVHbcOROt8uUGvOYplbDMh49Ie8y8qw==
+  version "1.52.0"
+  resolved "https://registry.yarnpkg.com/es-dev-server/-/es-dev-server-1.52.0.tgz#7af21ee7493832af5b9313ffee2d91f3e8c3b36c"
+  integrity sha512-58cbUOeShEqR6dWjC7TSLIQ1pok0JO8g/Duxo6jLu6H3Hxpiiywp7vIxcpQhZH2OC4UqbqWWsAMQsaswKE7S/w==
   dependencies:
     "@babel/core" "^7.9.0"
     "@babel/plugin-proposal-dynamic-import" "^7.8.3"
