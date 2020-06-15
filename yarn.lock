@@ -1446,18 +1446,18 @@
     lit-html "^1.0.0"
 
 "@open-wc/testing-karma-bs@^1.0.0":
-  version "1.3.79"
-  resolved "https://registry.yarnpkg.com/@open-wc/testing-karma-bs/-/testing-karma-bs-1.3.79.tgz#2e92e214dc1030ab79529fa7818010514fd93f06"
-  integrity sha512-r+GA/wRR+h+lSoPxhzxjHNlfsDhv9aL6+DsjA7zAN9lTO25WUXllAhIUpuw0mXPfJKY2bb9+Sw3t1960Cmyj5g==
+  version "1.3.80"
+  resolved "https://registry.yarnpkg.com/@open-wc/testing-karma-bs/-/testing-karma-bs-1.3.80.tgz#1e9d810cbe3f5c0aca3ecb47ddf4ae1364b6beeb"
+  integrity sha512-uiHcMaX1pv7pOCfg6PLpbFnZOHSSBGd3CZGiK7EoncJ1up7IVaNqgk3C7w7pOmGswpY8/YXOsg4/JQgdhv8wOA==
   dependencies:
-    "@open-wc/testing-karma" "^3.4.3"
+    "@open-wc/testing-karma" "^3.4.4"
     "@types/node" "^11.13.0"
     karma-browserstack-launcher "^1.0.0"
 
-"@open-wc/testing-karma@^3.0.0", "@open-wc/testing-karma@^3.4.3":
-  version "3.4.3"
-  resolved "https://registry.yarnpkg.com/@open-wc/testing-karma/-/testing-karma-3.4.3.tgz#5ab6a788ccaa731bc2efd42c78cfddef53a65a38"
-  integrity sha512-38xilLJ+dyFjWM3JA0GV/11+zvS4Ju681rJhKwXwjG0f5aWTcxNV5XTNpXsAnPG36HrTBQJHeUO4Ktn8ejQfwQ==
+"@open-wc/testing-karma@^3.0.0", "@open-wc/testing-karma@^3.4.4":
+  version "3.4.4"
+  resolved "https://registry.yarnpkg.com/@open-wc/testing-karma/-/testing-karma-3.4.4.tgz#56dfe3791d8d75f14ac96490778bb4942da9f992"
+  integrity sha512-rlXsQECBktku4PN0QiCVHW04B0kBRzyYlK71yLDOskBWTLAEdxN7A6wQKvNU58cgjQe5lzP8AyAgAqWKu7yx1A==
   dependencies:
     "@open-wc/karma-esm" "^2.16.14"
     "@types/karma" "^5.0.0"
