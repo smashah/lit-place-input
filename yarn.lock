@@ -1467,16 +1467,16 @@
     eslint-plugin-no-only-tests "^2.4.0"
     eslint-plugin-wc "^1.2.0"
 
-"@open-wc/karma-esm@^2.16.15":
-  version "2.16.15"
-  resolved "https://registry.yarnpkg.com/@open-wc/karma-esm/-/karma-esm-2.16.15.tgz#762a543dcf7a7eddd1c8204d8cbd2b7c1908b28e"
-  integrity sha512-L5/Aux653aLAQrbH7MLnYAMCYVp6Wdwe5JkGIt9pOgEBBIDRosBkxOpYpcvgPN7O8wnGUx3J9VnsJ7romS7VwA==
+"@open-wc/karma-esm@^2.16.16":
+  version "2.16.16"
+  resolved "https://registry.yarnpkg.com/@open-wc/karma-esm/-/karma-esm-2.16.16.tgz#6ebff57f249e95f777b7e04782ef08ed41e22f53"
+  integrity sha512-IALT10JfwK+h7T0hGKTUliGdkWzQbyQg195D+RfUteIoTof6Z5+dBp7JUh2fQygIyNj7IIYHJ9ej816QlgHjdA==
   dependencies:
     "@open-wc/building-utils" "^2.18.0"
     babel-plugin-istanbul "^5.1.4"
     chokidar "^3.0.0"
     deepmerge "^4.2.2"
-    es-dev-server "^1.55.1"
+    es-dev-server "^1.56.0"
     minimatch "^3.0.4"
     node-fetch "^2.6.0"
     polyfills-loader "^1.6.1"
@@ -1551,11 +1551,11 @@
     karma-browserstack-launcher "^1.0.0"
 
 "@open-wc/testing-karma@^3.0.0", "@open-wc/testing-karma@^3.4.5":
-  version "3.4.5"
-  resolved "https://registry.yarnpkg.com/@open-wc/testing-karma/-/testing-karma-3.4.5.tgz#116205167418e0b879992b2eac3f3d727f7a716e"
-  integrity sha512-PfudlhY8N0hiW7nKv+WvyjaGVsWXLqMvkmGSC9mDaIoK2A3Re3cQZuO8Rum3q+jAKC/3qlaYb4AYd64HtpZ1pw==
+  version "3.4.6"
+  resolved "https://registry.yarnpkg.com/@open-wc/testing-karma/-/testing-karma-3.4.6.tgz#aacf5df4d17887017970bc22bcc7d9167f13f663"
+  integrity sha512-DTCzmZY1NOlhTnwef8N9ENd/TOykkIAXlJG36hjMRvBE3l0gYI1t+9N9x3f8jWHzrEzfTk5Hi7//iMUU0eLcZg==
   dependencies:
-    "@open-wc/karma-esm" "^2.16.15"
+    "@open-wc/karma-esm" "^2.16.16"
     "@types/karma" "^5.0.0"
     "@types/karma-coverage-istanbul-reporter" "^2.1.0"
     "@types/karma-mocha" "^1.3.0"
@@ -3349,7 +3349,7 @@ es-abstract@^1.17.0, es-abstract@^1.17.0-next.1:
     string.prototype.trimleft "^2.1.1"
     string.prototype.trimright "^2.1.1"
 
-es-dev-server@^1.23.0, es-dev-server@^1.55.1, es-dev-server@^1.56.0:
+es-dev-server@^1.23.0, es-dev-server@^1.56.0:
   version "1.56.0"
   resolved "https://registry.yarnpkg.com/es-dev-server/-/es-dev-server-1.56.0.tgz#8703af87595f02fe9a1c92a07e64b7c7cc915a87"
   integrity sha512-SL4CXdiku0hiB8zpsBLtEd7b8etIZE6IV0tIi02m0CcpTYV0rDMEvCBUYsQIN5hggJDDTBURgQjOWcT5kQv2eA==
