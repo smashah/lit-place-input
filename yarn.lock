@@ -1204,10 +1204,10 @@
     lit-html "^1.1.2"
     tslib "^1.10.0"
 
-"@material/mwc-icon@0.18.0":
-  version "0.18.0"
-  resolved "https://registry.yarnpkg.com/@material/mwc-icon/-/mwc-icon-0.18.0.tgz#7164aaac89616241bb924a5a9db668f8c54e04bd"
-  integrity sha512-3tYVi7DqGuL3Rk+iy+O6Mf/yB3Gc70Pf9RKMEXlEbTCilLqKTEDf4qp9RuUMN8QvWBsIH9dBWRvbApItYYgJfA==
+"@material/mwc-icon@0.19.0":
+  version "0.19.0"
+  resolved "https://registry.yarnpkg.com/@material/mwc-icon/-/mwc-icon-0.19.0.tgz#4c152b2f79c381b6c1f7c37cec2a7b04d5e09d7e"
+  integrity sha512-9Zz7QsstIVjVsO1gpNP6eOMoXU54AUEdcE98poK6HQTz0WvYO+UXGgUGWsAZAABYP6/Ue7f8yRcQmnmH4DH1TQ==
   dependencies:
     lit-element "^2.3.0"
     tslib "^1.10.0"
