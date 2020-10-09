@@ -1185,20 +1185,20 @@
     "@material/theme" "8.0.0-canary.774dcfc8e.0"
     tslib "^1.9.3"
 
-"@material/mwc-base@^0.19.0":
-  version "0.19.0"
-  resolved "https://registry.yarnpkg.com/@material/mwc-base/-/mwc-base-0.19.0.tgz#ff6f693bd6d68030522c8bc9fbe5dccffbc320de"
-  integrity sha512-RQdbUxkoCq02uUVXmOPwn1dRBsf+ul21fU7mFwAHv7bodASh3KdeMNiMUV/thtnAf4+fpZMgOjUoBZ1DuOlC1g==
+"@material/mwc-base@^0.19.1":
+  version "0.19.1"
+  resolved "https://registry.yarnpkg.com/@material/mwc-base/-/mwc-base-0.19.1.tgz#0b4069249f90e3971467c6ed8d26bb6be219bd30"
+  integrity sha512-tYih18Fd99nURPN8ulzibIUeCUo/Wv1ScQIWYZtDkXwOiEvDJDYm0jDO96bOMRZK8aIvW/URspbUoa/RkK2yYw==
   dependencies:
     "@material/base" "=8.0.0-canary.774dcfc8e.0"
     "@material/dom" "=8.0.0-canary.774dcfc8e.0"
     lit-element "^2.3.0"
     tslib "^1.10.0"
 
-"@material/mwc-floating-label@^0.19.0":
-  version "0.19.0"
-  resolved "https://registry.yarnpkg.com/@material/mwc-floating-label/-/mwc-floating-label-0.19.0.tgz#e584509ee6f8290a074bcd7663b4733804f53b27"
-  integrity sha512-7yQmh7FGc/ozrvrej2uJhl2NjYikbEh/OKz07TKml8ILk+wgsLnl/OQMej7nVPqAqvg+96pg7+jhkRiydJWVQA==
+"@material/mwc-floating-label@^0.19.1":
+  version "0.19.1"
+  resolved "https://registry.yarnpkg.com/@material/mwc-floating-label/-/mwc-floating-label-0.19.1.tgz#03010c49f6d55908b0c48f30d8c9e08fe8631e05"
+  integrity sha512-UcvnRZKAW0i2dhZrQH4jUaYJxBD0v8q8/sjI9KsFLoDx3DX+8fb+KbCaw6O+2G97wTeheBg0ZWiy9YXM5F69Zw==
   dependencies:
     "@material/floating-label" "=8.0.0-canary.774dcfc8e.0"
     lit-html "^1.1.2"
@@ -1212,37 +1212,37 @@
     lit-element "^2.3.0"
     tslib "^1.10.0"
 
-"@material/mwc-line-ripple@^0.19.0":
-  version "0.19.0"
-  resolved "https://registry.yarnpkg.com/@material/mwc-line-ripple/-/mwc-line-ripple-0.19.0.tgz#dd1cbcffb4b2b8776528d498f16e4d272fac0c09"
-  integrity sha512-jZ+wdMnmCP7vcVndTWzDZ0yykDfleIqHsQGKk8+ckXj2/sgi0QzgS2rF/qDaqkRQNsvjh93NK37CepjiNvEiiQ==
+"@material/mwc-line-ripple@^0.19.1":
+  version "0.19.1"
+  resolved "https://registry.yarnpkg.com/@material/mwc-line-ripple/-/mwc-line-ripple-0.19.1.tgz#26b4fb6cda360d8bc80f168f95ebc64c98355a00"
+  integrity sha512-q8pgd/C6IW2VAkh8EJfuOe2qgeUIfYe3QPBt/uJPkbWbdRuI7wLeaUy4mXf781NvT+Yvas/Tsgrkx1cjK4yoJQ==
   dependencies:
     "@material/line-ripple" "=8.0.0-canary.774dcfc8e.0"
     lit-html "^1.1.2"
     tslib "^1.10.0"
 
-"@material/mwc-notched-outline@^0.19.0":
-  version "0.19.0"
-  resolved "https://registry.yarnpkg.com/@material/mwc-notched-outline/-/mwc-notched-outline-0.19.0.tgz#2156f4190a36b83f16b72b44a1a9a49cf827db4b"
-  integrity sha512-taLNBMkRtB3bmH/zfprm8yDt/lfNnb3MsxJ7Yohf2iId50J25GsyR7+mZqB4bIl2PYRq4sw8SkDWvrNmPKzCsQ==
+"@material/mwc-notched-outline@^0.19.1":
+  version "0.19.1"
+  resolved "https://registry.yarnpkg.com/@material/mwc-notched-outline/-/mwc-notched-outline-0.19.1.tgz#c20b394312f8d543972a5043d78a1070c3d610bd"
+  integrity sha512-nwLIU9p1zr41/8NBOljbztZLlT8Dry+j8JSVnlfnO2cJBzIgzLiGY8kF+0+APrlrFqV3LPCpNnzYZhl/a2v+ag==
   dependencies:
-    "@material/mwc-base" "^0.19.0"
+    "@material/mwc-base" "^0.19.1"
     "@material/notched-outline" "=8.0.0-canary.774dcfc8e.0"
     lit-element "^2.3.0"
     lit-html "^1.1.2"
     tslib "^1.10.0"
 
 "@material/mwc-textfield@^0.19.0":
-  version "0.19.0"
-  resolved "https://registry.yarnpkg.com/@material/mwc-textfield/-/mwc-textfield-0.19.0.tgz#5c8ea87f95885754291eccb5c3c11fa36dc8fbc5"
-  integrity sha512-DYXlbeWhXopVY4k8zYwpO8DpPL/UpNkYsoSxY6aYckcqFTW7jNuT78qyktiFRo91y37it3DNtAC/oItDBRde1g==
+  version "0.19.1"
+  resolved "https://registry.yarnpkg.com/@material/mwc-textfield/-/mwc-textfield-0.19.1.tgz#161477ad1a8edb78da97af5f316efb5db3403e19"
+  integrity sha512-GDwbOVYK7j1T8lqlcpfBciEbw/UnuppH/li8Z7hWd0z2NypiHjcQxIlJyw8wb0xQotIkOMIUpl0zFJTugmRYDg==
   dependencies:
     "@material/floating-label" "=8.0.0-canary.774dcfc8e.0"
     "@material/line-ripple" "=8.0.0-canary.774dcfc8e.0"
-    "@material/mwc-base" "^0.19.0"
-    "@material/mwc-floating-label" "^0.19.0"
-    "@material/mwc-line-ripple" "^0.19.0"
-    "@material/mwc-notched-outline" "^0.19.0"
+    "@material/mwc-base" "^0.19.1"
+    "@material/mwc-floating-label" "^0.19.1"
+    "@material/mwc-line-ripple" "^0.19.1"
+    "@material/mwc-notched-outline" "^0.19.1"
     "@material/textfield" "=8.0.0-canary.774dcfc8e.0"
     lit-element "^2.3.0"
     lit-html "^1.1.2"
