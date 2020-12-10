@@ -44,7 +44,7 @@
     "@open-wc/testing-karma-bs": "^1.0.0",
     "@storybook/storybook-deployer": "^2.8.3",
     "deepmerge": "^4.2.2",
-    "es-dev-server": "^1.23.0",
+    "es-dev-server": "^2.0.2",
     "eslint": "^7.0.0",
     "husky": "^4.2.3",
     "lint-staged": "^10.0.8"
