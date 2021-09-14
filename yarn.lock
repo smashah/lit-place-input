@@ -1160,13 +1160,13 @@
     lit-html "^1.1.2"
     tslib "^1.10.0"
 
-"@material/mwc-icon@0.19.1":
-  version "0.19.1"
-  resolved "https://registry.yarnpkg.com/@material/mwc-icon/-/mwc-icon-0.19.1.tgz#4dddf27a9f24262b02ea9cddc39800fec8b42920"
-  integrity sha512-MM3Qz3Inkyo4gU5bHDp/o9TEk9K53Y+glbJGiAUj1dAisrRSwptd7xagROzzmVKlcxN+OHqBOGLFx49ztFP/7Q==
+"@material/mwc-icon@0.23.0":
+  version "0.23.0"
+  resolved "https://registry.yarnpkg.com/@material/mwc-icon/-/mwc-icon-0.23.0.tgz#777479a4d7aa88890a560ed23bfa053b0e4399ea"
+  integrity sha512-rb0m5M4KHi8+itaepPFOnS3RDxX+6NtrW5KHsbY/b5+LALzjC1gcXSpf5o79D28dYW/2ddyfQDdR2ssjKDoAgQ==
   dependencies:
-    lit-element "^2.3.0"
-    tslib "^1.10.0"
+    lit-element "^2.5.1"
+    tslib "^2.0.1"
 
 "@material/mwc-line-ripple@^0.19.1":
   version "0.19.1"
@@ -5262,10 +5262,10 @@ listr2@^3.2.2:
     rxjs "^6.6.3"
     through "^2.3.8"
 
-lit-element@^2.2.1, lit-element@^2.3.0, lit-element@^2.3.1:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/lit-element/-/lit-element-2.4.0.tgz#b22607a037a8fc08f5a80736dddf7f3f5d401452"
-  integrity sha512-pBGLglxyhq/Prk2H91nA0KByq/hx/wssJBQFiYqXhGDvEnY31PRGYf1RglVzyLeRysu0IHm2K0P196uLLWmwFg==
+lit-element@^2.2.1, lit-element@^2.3.0, lit-element@^2.3.1, lit-element@^2.5.1:
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/lit-element/-/lit-element-2.5.1.tgz#3fa74b121a6cd22902409ae3859b7847d01aa6b6"
+  integrity sha512-ogu7PiJTA33bEK0xGu1dmaX5vhcRjBXCFexPja0e7P7jqLhTpNKYRPmE+GmiCaRVAbiQKGkUgkh/i6+bh++dPQ==
   dependencies:
     lit-html "^1.1.1"
 
@@ -7700,10 +7700,10 @@ tslib@^1.10.0, tslib@^1.11.1, tslib@^1.9.0, tslib@^1.9.3:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.12.0.tgz#d1fc9cacd06a1456c62f2902b361573e83d66473"
   integrity sha512-5rxCQkP0kytf4H1T4xz1imjxaUUPMvc5aWp0rJ/VMIN7ClRiH1FwFvBt8wOeMasp/epeUnmSW6CixSIePtiLqA==
 
-tslib@^2.0.0:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.0.3.tgz#8e0741ac45fc0c226e58a17bfc3e64b9bc6ca61c"
-  integrity sha512-uZtkfKblCEQtZKBF6EBXVZeQNl82yqtDQdv+eck8u7tdPxjLu2/lp5/uPW+um2tpuxINHWy3GhiccY7QgEaVHQ==
+tslib@^2.0.0, tslib@^2.0.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.3.1.tgz#e8a335add5ceae51aa261d32a490158ef042ef01"
+  integrity sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==
 
 tsscmp@1.0.6:
   version "1.0.6"
